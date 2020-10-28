@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestelPaginaWokPlaza", "BestelPaginaWokPlaza\BestelPaginaWokPlaza.csproj", "{57E3943F-A3D9-421C-ABB1-6068AD595CDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj", "{3FCCD580-EB61-4785-A520-99209156ECB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{7C76FA54-DA7E-4722-9603-79CF90058817}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57E3943F-A3D9-421C-ABB1-6068AD595CDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57E3943F-A3D9-421C-ABB1-6068AD595CDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57E3943F-A3D9-421C-ABB1-6068AD595CDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57E3943F-A3D9-421C-ABB1-6068AD595CDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FCCD580-EB61-4785-A520-99209156ECB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FCCD580-EB61-4785-A520-99209156ECB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FCCD580-EB61-4785-A520-99209156ECB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FCCD580-EB61-4785-A520-99209156ECB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C76FA54-DA7E-4722-9603-79CF90058817}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C76FA54-DA7E-4722-9603-79CF90058817}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C76FA54-DA7E-4722-9603-79CF90058817}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C76FA54-DA7E-4722-9603-79CF90058817}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2EF165D5-C3E7-48C5-B344-F1735520457F}
+	EndGlobalSection
+EndGlobal
