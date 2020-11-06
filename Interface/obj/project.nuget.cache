@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "p0DTH2MrnnH5Xalhb9clsFABSdpujfFwsZYz7tnjNVptGsTR1aaZxzVToG2PhYUu63mi+c7QD0X50DYlvqfGDA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lei\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Lei\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
