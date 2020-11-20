@@ -6,5 +6,6 @@ namespace Factory
 {
     public class DishFactory
     {
+
     }
 }

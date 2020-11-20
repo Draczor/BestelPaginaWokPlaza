@@ -1,0 +1,16 @@
+﻿@model BestelPaginaWokPlaza.Models.CategoryModel
+@{
+    ViewData["Title"] = "AddCategory";
+}
+
+<div>
+    <h1 class="title">@ViewBag.Title</h1>
+</div>
+<form method="post" enctype="multipart/form-data" action="AddCategory">
+    <div class="container">
+        <label class="form-control-static">Category Name:*</label>
+        @Html.EditorFor(m => m.category_name, new { htmlAttributes = new { @class = "form-control" }, })
+        @Html.ValidationMessageFor(m => m.category_name, "", new { @class = "text-danger" }) <br />
+        <input class="btn btn-primary" type="submit" value="Add new category" />
+    </div>
+</form>

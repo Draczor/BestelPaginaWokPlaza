@@ -9,3 +9,15 @@ C:\Users\Lei\source\repos\BestelPaginaWokPlaza\DAL\obj\Debug\netstandard2.0\DAL.
 C:\Users\Lei\source\repos\BestelPaginaWokPlaza\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
 C:\Users\Lei\source\repos\BestelPaginaWokPlaza\DAL\obj\Debug\netstandard2.0\DAL.dll
 C:\Users\Lei\source\repos\BestelPaginaWokPlaza\DAL\obj\Debug\netstandard2.0\DAL.pdb
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\DAL\bin\Debug\netstandard2.0\DAL.dll
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\DAL\bin\Debug\netstandard2.0\DAL.pdb
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\DAL\bin\Debug\netstandard2.0\Interface.dll
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\DAL\bin\Debug\netstandard2.0\Interface.pdb
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\DAL\obj\Debug\netstandard2.0\DAL.csprojAssemblyReference.cache
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\DAL\obj\Debug\netstandard2.0\DAL.dll
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\DAL\obj\Debug\netstandard2.0\DAL.pdb

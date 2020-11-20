@@ -12,3 +12,17 @@ C:\Users\Lei\source\repos\BestelPaginaWokPlaza\Factory\obj\Debug\netstandard2.0\
 C:\Users\Lei\source\repos\BestelPaginaWokPlaza\Factory\obj\Debug\netstandard2.0\Factory.csproj.CopyComplete
 C:\Users\Lei\source\repos\BestelPaginaWokPlaza\Factory\obj\Debug\netstandard2.0\Factory.dll
 C:\Users\Lei\source\repos\BestelPaginaWokPlaza\Factory\obj\Debug\netstandard2.0\Factory.pdb
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\Factory\bin\Debug\netstandard2.0\Factory.deps.json
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\Factory\bin\Debug\netstandard2.0\Factory.dll
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\Factory\bin\Debug\netstandard2.0\Factory.pdb
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\Factory\bin\Debug\netstandard2.0\DAL.dll
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\Factory\bin\Debug\netstandard2.0\Interface.dll
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\Factory\bin\Debug\netstandard2.0\DAL.pdb
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\Factory\bin\Debug\netstandard2.0\Interface.pdb
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\Factory\obj\Debug\netstandard2.0\Factory.csprojAssemblyReference.cache
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\Factory\obj\Debug\netstandard2.0\Factory.AssemblyInfoInputs.cache
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\Factory\obj\Debug\netstandard2.0\Factory.AssemblyInfo.cs
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\Factory\obj\Debug\netstandard2.0\Factory.csproj.CoreCompileInputs.cache
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\Factory\obj\Debug\netstandard2.0\Factory.csproj.CopyComplete
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\Factory\obj\Debug\netstandard2.0\Factory.dll
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\Factory\obj\Debug\netstandard2.0\Factory.pdb

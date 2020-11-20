@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj": {}
+    "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj": {
+    "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj",
+        "projectUniqueName": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj",
         "projectName": "Interface",
-        "projectPath": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj",
-        "packagesPath": "C:\\Users\\Lei\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Interface\\obj\\",
+        "projectPath": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj",
+        "packagesPath": "C:\\Users\\lzhen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Interface\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Lei\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lzhen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +58,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

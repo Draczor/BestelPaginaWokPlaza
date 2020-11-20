@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza.csproj": {}
+    "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza.csproj": {
+    "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza.csproj",
+        "projectUniqueName": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza.csproj",
         "projectName": "BestelPaginaWokPlaza",
-        "projectPath": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza.csproj",
-        "packagesPath": "C:\\Users\\Lei\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza\\obj\\",
+        "projectPath": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza.csproj",
+        "packagesPath": "C:\\Users\\lzhen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Lei\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lzhen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Logic\\Logic.csproj": {
-                "projectPath": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Logic\\Logic.csproj"
+              "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Logic\\Logic.csproj": {
+                "projectPath": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Logic\\Logic.csproj"
               }
             }
           }
@@ -41,6 +44,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -59,21 +68,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\DAL\\DAL.csproj": {
+    "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\Lei\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\DAL\\obj\\",
+        "projectPath": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\lzhen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\DAL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Lei\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lzhen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -86,8 +98,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj": {
-                "projectPath": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj"
+              "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj": {
+                "projectPath": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj"
               }
             }
           }
@@ -122,21 +134,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Factory\\Factory.csproj": {
+    "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Factory\\Factory.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Factory\\Factory.csproj",
+        "projectUniqueName": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Factory\\Factory.csproj",
         "projectName": "Factory",
-        "projectPath": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Factory\\Factory.csproj",
-        "packagesPath": "C:\\Users\\Lei\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Factory\\obj\\",
+        "projectPath": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Factory\\Factory.csproj",
+        "packagesPath": "C:\\Users\\lzhen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Factory\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Lei\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lzhen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -149,8 +164,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\DAL\\DAL.csproj"
+              "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\DAL\\DAL.csproj"
               }
             }
           }
@@ -181,21 +196,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj": {
+    "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj",
+        "projectUniqueName": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj",
         "projectName": "Interface",
-        "projectPath": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj",
-        "packagesPath": "C:\\Users\\Lei\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Interface\\obj\\",
+        "projectPath": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj",
+        "packagesPath": "C:\\Users\\lzhen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Interface\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Lei\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lzhen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -236,21 +254,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Logic\\Logic.csproj": {
+    "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Logic\\Logic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Logic\\Logic.csproj",
+        "projectUniqueName": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Logic\\Logic.csproj",
         "projectName": "Logic",
-        "projectPath": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Logic\\Logic.csproj",
-        "packagesPath": "C:\\Users\\Lei\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Logic\\obj\\",
+        "projectPath": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Logic\\Logic.csproj",
+        "packagesPath": "C:\\Users\\lzhen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Logic\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Lei\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lzhen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -263,11 +284,11 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Factory\\Factory.csproj": {
-                "projectPath": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Factory\\Factory.csproj"
+              "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Factory\\Factory.csproj": {
+                "projectPath": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Factory\\Factory.csproj"
               },
-              "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj": {
-                "projectPath": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj"
+              "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj": {
+                "projectPath": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj"
               }
             }
           }
@@ -298,7 +319,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
