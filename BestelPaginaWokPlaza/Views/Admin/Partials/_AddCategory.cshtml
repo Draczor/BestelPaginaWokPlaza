@@ -1,0 +1,32 @@
+﻿@model BestelPaginaWokPlaza.Models.AdminViewModel
+@{
+    ViewData["Title"] = "AddCategory";
+}
+
+<div class="add-category">
+    <div class="pop-up-container" id="pop-up-container">
+        <div class="pop-up container">
+            <h1>Nieuwe categorie</h1>
+            <form method="post" class="category-form" enctype="multipart/form-data" action="AddCategory">
+                <label class="form-control-static">Naam:*</label>
+                @Html.EditorFor(m => m.categoryDTO.category_name, new { htmlAttributes = new { @class = "form-control" }, })
+                @Html.ValidationMessageFor(m => m.categoryDTO.category_name, "", new { @class = "text-danger" }) <br />
+
+                <div class="pop-up-button-field">
+                    <input class="btn btn-primary" type="submit" value="Opslaan" />
+                    <button type="button" id="CancelCategory" class="btn btn-secondary">Annuleren</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelector("#AddCategory").addEventListener("click", function (e) {
+        document.querySelector(".add-category").style.display = "block";
+    })
+
+    document.querySelector("#CancelCategory").addEventListener("click", function (e) {
+        document.querySelector(".add-category").style.display = "none";
+    })
+</script>

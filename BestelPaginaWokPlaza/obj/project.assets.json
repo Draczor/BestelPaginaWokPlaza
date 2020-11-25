@@ -6480,6 +6480,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Interface >= 1.0.0",
       "Logic >= 1.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.4"
     ]
@@ -6514,6 +6515,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+            "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj": {
+              "projectPath": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj"
+            },
             "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Logic\\Logic.csproj": {
               "projectPath": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Logic\\Logic.csproj"
             }

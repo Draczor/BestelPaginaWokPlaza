@@ -167,7 +167,8 @@ C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\bin\Debug\
 C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\netcoreapp3.1\BestelPaginaWokPlaza.csproj.CoreCompileInputs.cache
 C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\netcoreapp3.1\BestelPaginaWokPlaza.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\netcoreapp3.1\Razor\Views\Admin\AddCategory.cshtml.g.cs
 C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Login.cshtml.g.cs
 C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Management.cshtml.g.cs
 C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_Layout.cshtml.g.cs
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Partials\_AddDish.cshtml.g.cs
+C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Partials\_AddCategory.cshtml.g.cs

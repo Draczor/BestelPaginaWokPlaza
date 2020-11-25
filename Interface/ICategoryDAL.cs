@@ -7,5 +7,6 @@ namespace Interface
     public interface ICategoryDAL
     {
         void addCategory(CategoryDTO categoryName);
+        List<CategoryDTO> getCategory();
     }
 }

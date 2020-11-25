@@ -13,9 +13,6 @@ namespace Factory
             return new CategoryDAL();
         }
 
-        public static IDishDAL CreateDishDAL()
-        {
-            return new DishDAL();
-        }
+        
     }
 }

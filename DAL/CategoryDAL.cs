@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 using Interface;
@@ -17,6 +18,31 @@ namespace DAL
 
             Connection connection = new Connection();
             connection.ExecuteCommand(cmd);
+        }
+
+        public List<CategoryDTO> getCategory()
+        {
+            Connection connection = new Connection();
+            DataTable dtCategory = new DataTable();
+            List<CategoryDTO> categoriesList = new List<CategoryDTO>();
+
+            using (SqlConnection sqlcon = connection.con)
+            {
+                sqlcon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Category", sqlcon);
+                sqlDa.Fill(dtCategory);
+            }
+
+            for (int i = 0; i < dtCategory.Rows.Count; i++)
+            {
+                CategoryDTO categoryDTO = new CategoryDTO();
+                categoryDTO.category_id = Convert.ToInt32(dtCategory.Rows[i]["category_id"]);
+                categoryDTO.category_name = dtCategory.Rows[i]["category_name"].ToString();
+
+                categoriesList.Add(categoryDTO);
+            }
+
+            return categoriesList;
         }
     }
 }

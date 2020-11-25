@@ -7,7 +7,7 @@ namespace Interface
     public interface IDishCollectionDAL
     {
         void getDishList();
-        void addDish();
+        void addDish(DishDTO dishDTO);
         void deleteDish();
     }
 }

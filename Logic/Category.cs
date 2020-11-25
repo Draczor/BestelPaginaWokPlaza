@@ -18,5 +18,10 @@ namespace Logic
         {
             _CategoryDAL.addCategory(category);
         }
+
+        public List<CategoryDTO> getCategory()
+        {
+            return _CategoryDAL.getCategory();
+        }
     }
 }

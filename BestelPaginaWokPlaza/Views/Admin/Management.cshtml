@@ -1,18 +1,41 @@
-﻿
+﻿@model BestelPaginaWokPlaza.Models.AdminViewModel
 @{
     ViewData["Title"] = "Management";
 }
 <link rel="stylesheet" href="~/css/Management.css" />
 
-
 <h1 class="title">Beheer Pagina</h1>
 <div class="row">
     <div class="col-md-6 button-field">
-        <button type="button" class="btn btn-dark head-buttons">Nieuwe gerecht</button>
+        <button type="button" id="AddDish" class="btn btn-dark head-buttons">Nieuwe gerecht</button>
     </div>
     <div class="col-md-6 button-field">
-        <button type="button" onclick="location.href='@Url.Action("AddCategory","Admin")'" class="btn btn-dark head-buttons">Nieuwe categorie</button>
+        <button type="button" id="AddCategory" class="btn btn-dark head-buttons">Nieuwe categorie</button>
     </div>
 </div>
 
+@foreach (var category in Model.categoryList)
+{
+    <div class="category-name container">
+        <header class="category-header">
+            <h1>@category.Text</h1>
+        </header>
+    </div>
+}
 
+<partial name="Partials/_AddDish" />
+<partial name="Partials/_AddCategory" />
+
+<script>
+    let popupcontainers = document.querySelectorAll(".pop-up-container");
+    popupcontainers.forEach(popup => {
+        popup.addEventListener("click", function (e) {
+            console.log("clicked");
+            if (e.target.classList.contains("pop-up-container")) {
+                document.querySelector(".add-category").style.display = "none";
+                document.querySelector(".add-dish").style.display = "none";
+
+            }
+        })
+    })
+</script>

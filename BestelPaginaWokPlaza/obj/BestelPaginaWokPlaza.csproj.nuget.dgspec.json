@@ -30,6 +30,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj": {
+                "projectPath": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj"
+              },
               "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Logic\\Logic.csproj": {
                 "projectPath": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Logic\\Logic.csproj"
               }

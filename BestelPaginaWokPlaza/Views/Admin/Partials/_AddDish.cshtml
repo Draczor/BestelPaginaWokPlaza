@@ -1,0 +1,42 @@
+﻿@model BestelPaginaWokPlaza.Models.AdminViewModel
+@{
+        ViewData["Title"] = "_AddDish";
+}
+
+<div class="add-dish">
+    <div class="pop-up-container" id="pop-up-container">
+        <div class="pop-up container">
+            <h1>Nieuw gerecht</h1>
+            <form method="post" class="dish-form" enctype="multipart/form-data" action="AddDish">
+                <label class="form-control-static">Naam:*</label>
+                @Html.EditorFor(m => m.dishModel.name, new { htmlAttributes = new { @class = "form-control" }, })
+                @Html.ValidationMessageFor(m => m.dishModel.name, "", new { @class = "text-danger" }) <br />
+                <label class="form-control-static">Prijs:*</label>
+                @Html.EditorFor(m => m.dishModel.price, new { htmlAttributes = new { @class = "form-control" }, })
+                @Html.ValidationMessageFor(m => m.dishModel.price, "", new { @class = "text-danger" }) <br />
+
+                <label class="form-control-static">Categorie:*</label>
+                @Html.DropDownListFor(m => m.dishModel.category_id, new SelectList(Model.categoryList, "Value", "Text"))
+                @Html.ValidationMessageFor(m => m.dishModel.category_id, "", new { @class = "text-danger" }) <br />
+
+                <label class="form-control-static">Omschrijving:*</label>
+                @Html.EditorFor(m => m.dishModel.description, new { htmlAttributes = new { @class = "form-control" }, })
+                @Html.ValidationMessageFor(m => m.dishModel.description, "", new { @class = "text-danger" }) <br />
+                <div class="pop-up-button-field">
+                    <input class="btn btn-primary" type="submit" value="Opslaan" />
+                    <button type="button" id="CancelDish" class="btn btn-secondary">Annuleren</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelector("#AddDish").addEventListener("click", function (e) {
+        document.querySelector(".add-dish").style.display = "block";
+    })
+
+    document.querySelector("#CancelDish").addEventListener("click", function (e) {
+        document.querySelector(".add-dish").style.display = "none";
+    })
+</script>
