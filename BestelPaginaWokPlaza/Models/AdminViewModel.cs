@@ -11,6 +11,7 @@ namespace BestelPaginaWokPlaza.Models
     {
         public CategoryDTO categoryDTO { get; set; }
         public List<SelectListItem> categoryList { get; set; } 
+        public List<DishDTO> dishList { get; set; }
         public DishModel dishModel { get; set; } 
     }
 }

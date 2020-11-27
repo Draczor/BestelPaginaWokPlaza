@@ -18,5 +18,10 @@ namespace Logic
         {
             _DishCollectionDAL.addDish(dishDTO);
         }
+
+        public List<DishDTO> getDishList()
+        {
+            return _DishCollectionDAL.getDishList();
+        }
     }
 }

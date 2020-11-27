@@ -6,7 +6,7 @@ namespace Interface
 {
     public class CategoryDTO
     {
-        public int category_id { get; set; }
+        public int id { get; set; }
         public string category_name { get; set; }
     }
 }

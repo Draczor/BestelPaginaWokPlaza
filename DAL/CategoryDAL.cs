@@ -36,7 +36,7 @@ namespace DAL
             for (int i = 0; i < dtCategory.Rows.Count; i++)
             {
                 CategoryDTO categoryDTO = new CategoryDTO();
-                categoryDTO.category_id = Convert.ToInt32(dtCategory.Rows[i]["category_id"]);
+                categoryDTO.id = Convert.ToInt32(dtCategory.Rows[i]["id"]);
                 categoryDTO.category_name = dtCategory.Rows[i]["category_name"].ToString();
 
                 categoriesList.Add(categoryDTO);

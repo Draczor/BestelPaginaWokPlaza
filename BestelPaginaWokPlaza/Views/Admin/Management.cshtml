@@ -16,12 +16,27 @@
 
 @foreach (var category in Model.categoryList)
 {
-    <div class="category-name container">
-        <header class="category-header">
-            <h1>@category.Text</h1>
-        </header>
-    </div>
+<table class="category-item">
+    <tr class="category-header">
+        <th class="category-name">@category.Text</th>
+    </tr>
+
+    @foreach (var dish in Model.dishList)
+    {
+        if (Convert.ToInt32(category.Value) == dish.category_id)
+        {
+            <tr class="dish-item">
+                <td class="dish-content">
+                    <h3 class="dish-name">@dish.name</h3>
+                    <span class="dish-price">&#8364; @dish.price</span>
+                    <span class="dish-description">@dish.description</span>
+                </td>
+            </tr>
+        }
+    }
+</table>
 }
+
 
 <partial name="Partials/_AddDish" />
 <partial name="Partials/_AddCategory" />
@@ -34,7 +49,6 @@
             if (e.target.classList.contains("pop-up-container")) {
                 document.querySelector(".add-category").style.display = "none";
                 document.querySelector(".add-dish").style.display = "none";
-
             }
         })
     })

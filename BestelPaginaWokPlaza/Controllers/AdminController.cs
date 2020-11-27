@@ -35,6 +35,10 @@ namespace BestelPaginaWokPlaza.Controllers
         [HttpPost]
         public IActionResult AddDish(AdminViewModel adminViewModel)
         {
+            if (adminViewModel.dishModel.description == null)
+            {
+                adminViewModel.dishModel.description = "";
+            }
 
             DishCollection dishCollection = new DishCollection();
             dishCollection.addDish(new DishDTO { 
@@ -55,10 +59,16 @@ namespace BestelPaginaWokPlaza.Controllers
         public IActionResult Management()
         {
             Category category = new Category();
-
+            DishCollection dishCollection = new DishCollection();
             AdminViewModel adminViewModel = new AdminViewModel();
+
             List<CategoryDTO> categories = category.getCategory();
-            adminViewModel.categoryList = categories.Select(category => new SelectListItem { Value = category.category_id.ToString(), Text = category.category_name }).ToList();
+            adminViewModel.categoryList = categories.Select(category => new SelectListItem { 
+                Value = category.id.ToString(), 
+                Text = category.category_name 
+            }).ToList();
+
+            adminViewModel.dishList = dishCollection.getDishList();
 
             return View(adminViewModel);
         }

@@ -7,7 +7,7 @@ namespace BestelPaginaWokPlaza.Models
 {
     public class DishModel
     {
-        public int dish_id { get; set; }
+        public int id { get; set; }
         public string name { get; set; }
         public decimal price { get; set; }
         public int category_id { get; set; }
