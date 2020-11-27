@@ -25,13 +25,20 @@
     {
         if (Convert.ToInt32(category.Value) == dish.category_id)
         {
-            <tr class="dish-item">
-                <td class="dish-content">
+        <tr class="dish-item">
+            <td>
+                <div class="dish-content">
                     <h3 class="dish-name">@dish.name</h3>
                     <span class="dish-price">&#8364; @dish.price</span>
+                    <div class="dish-button-actions">
+                        <button type="button" class="btn btn-sm btn-secondary">Edit</button>
+                        <button type="button" class="btn btn-sm btn-secondary">Delete</button>
+                    </div>
                     <span class="dish-description">@dish.description</span>
-                </td>
-            </tr>
+                </div>
+            </td>
+
+        </tr>
         }
     }
 </table>

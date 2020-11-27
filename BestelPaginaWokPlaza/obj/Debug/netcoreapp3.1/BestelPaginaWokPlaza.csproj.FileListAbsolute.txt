@@ -26,8 +26,6 @@ C:\Users\Lei\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\ne
 C:\Users\Lei\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\netcoreapp3.1\BestelPaginaWokPlaza.TagHelpers.input.cache
 C:\Users\Lei\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\netcoreapp3.1\BestelPaginaWokPlaza.TagHelpers.output.cache
 C:\Users\Lei\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\netcoreapp3.1\BestelPaginaWokPlaza.RazorCoreGenerate.cache
-C:\Users\Lei\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\Lei\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\Lei\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\Lei\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\Lei\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -256,3 +254,6 @@ C:\Users\Lei\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\ne
 C:\Users\Lei\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Partials\_AddCategory.cshtml.g.cs
 C:\Users\Lei\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Partials\_AddDish.cshtml.g.cs
 C:\Users\Lei\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_Layout.cshtml.g.cs
+C:\Users\Lei\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\netcoreapp3.1\Razor\Views\OrderPage\Order.cshtml.g.cs
+C:\Users\Lei\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\netcoreapp3.1\Razor\Views\OrderPage\Partials\_ShoppingCart.cshtml.g.cs
+C:\Users\Lei\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\netcoreapp3.1\Razor\Views\OrderPage\_Layout.cshtml.g.cs

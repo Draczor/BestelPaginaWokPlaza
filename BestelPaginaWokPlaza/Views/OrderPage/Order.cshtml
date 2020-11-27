@@ -1,0 +1,43 @@
+﻿@model BestelPaginaWokPlaza.Models.AdminViewModel
+@{
+    ViewData["Title"] = "Bestelpagina";
+}
+<link rel="stylesheet" href="~/css/OrderPage.css" />
+
+<h1 class="title">Bestelpagina van Wok Plaza</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 navigation-column">
+            <h5>Categorie navigatie</h5>
+        </div>
+        <div class="col-lg-6 dish-column">
+            @foreach (var category in Model.categoryList)
+            {
+                <table class="category-item">
+                    <tr class="category-header">
+                        <th class="category-name">@category.Text</th>
+                    </tr>
+
+                    @foreach (var dish in Model.dishList)
+                    {
+                        if (Convert.ToInt32(category.Value) == dish.category_id)
+                        {
+                            <tr class="dish-item">
+                                <td class="dish-content">
+                                    <h3 class="dish-name">@dish.name</h3>
+                                    <button type="button" class="dish-price btn btn-primary">&#8364; @dish.price +</button>
+                                    <span class="dish-description">@dish.description</span>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </table>
+            }
+        </div>
+        <partial name="Partials/_ShoppingCart" />
+        
+    </div>
+</div>
+
+
