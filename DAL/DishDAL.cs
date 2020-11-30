@@ -55,6 +55,28 @@ namespace DAL
             return dishList;
         }
 
+        public DishDTO getDishById(int id)
+        {
+            Connection connection = new Connection();
+            DataTable dtDish = new DataTable();
+            
+            using (SqlConnection sqlcon = connection.con)
+            {
+                sqlcon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Dish WHERE id = " + id, sqlcon);
+                sqlDa.Fill(dtDish);
+            }
+
+            DishDTO dishDTO = new DishDTO();
+            dishDTO.id = Convert.ToInt32(dtDish.Rows[0]["id"]);
+            dishDTO.name = dtDish.Rows[0]["name"].ToString();
+            dishDTO.price = Convert.ToDecimal(dtDish.Rows[0]["price"]);
+            dishDTO.category_id = Convert.ToInt32(dtDish.Rows[0]["category_id"]);
+            dishDTO.description = dtDish.Rows[0]["description"].ToString();
+
+            return dishDTO;
+        }
+
         public void update()
         {
             throw new NotImplementedException();

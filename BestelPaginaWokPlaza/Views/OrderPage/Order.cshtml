@@ -19,14 +19,15 @@
                         <th class="category-name">@category.Text</th>
                     </tr>
 
-                    @foreach (var dish in Model.dishList)
+                    @foreach (DishModel dish in Model.dishList)
                     {
                         if (Convert.ToInt32(category.Value) == dish.category_id)
                         {
                             <tr class="dish-item">
                                 <td class="dish-content">
+                                    <input class="dish-id" type="hidden" value="@dish.id"/>
                                     <h3 class="dish-name">@dish.name</h3>
-                                    <button type="button" class="dish-price btn btn-primary">&#8364; @dish.price +</button>
+                                    <button type="button" class="dish-price btn btn-primary" onclick="AddDish(event)">&#8364; @dish.price +</button>
                                     <span class="dish-description">@dish.description</span>
                                 </td>
                             </tr>
@@ -39,5 +40,40 @@
         
     </div>
 </div>
+
+<script>
+
+    function appendShoppingCart(result) {
+        const winkelwagen = document.querySelector(".shoppingCart")
+        winkelwagen.innerHTML = "";
+        if (result != null) {
+            result.reverse();
+
+            result.forEach(item => {
+                var titel = document.createElement("p")
+                titel.innerHTML += item["name"]
+
+                winkelwagen.append(titel);
+            });
+        }
+    }
+
+    const AddDish = (e) => {
+        const target = e.target.parentElement
+        const dishId = target.querySelector(".dish-id").value;
+        console.log(dishId);
+        $.post("/ShoppingCart/AddToCart", { id: dishId }, function (result) {
+            console.log(result);
+        });
+
+        setTimeout(function() {
+            $.get("/ShoppingCart/GetAllShoppingCartItems", function (result) {
+                console.log(result);
+                appendShoppingCart(result);
+            });
+        }, 300);
+    }
+   
+</script>
 
 

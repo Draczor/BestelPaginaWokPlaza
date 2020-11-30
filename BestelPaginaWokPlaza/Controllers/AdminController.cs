@@ -68,7 +68,8 @@ namespace BestelPaginaWokPlaza.Controllers
                 Text = category.category_name 
             }).ToList();
 
-            adminViewModel.dishList = dishCollection.getDishList();
+            List<DishDTO> dishes = dishCollection.getDishList();
+            adminViewModel.dishList = dishes.Select(dish => new DishModel { id = dish.id, name = dish.name, price = dish.price, category_id = dish.category_id, description = dish.description }).ToList();
 
             return View(adminViewModel);
         }

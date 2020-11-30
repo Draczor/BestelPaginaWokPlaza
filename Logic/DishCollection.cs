@@ -23,5 +23,10 @@ namespace Logic
         {
             return _DishCollectionDAL.getDishList();
         }
+
+        public DishDTO getDishById(int id)
+        {
+            return _DishCollectionDAL.getDishById(id);
+        }
     }
 }
