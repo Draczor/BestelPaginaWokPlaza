@@ -8,7 +8,7 @@ namespace Interface
     {
         List<DishDTO> getDishList();
         void addDish(DishDTO dishDTO);
-        void deleteDish();
+        void deleteDish(int id);
         DishDTO getDishById(int id);
     }
 }

@@ -11,7 +11,7 @@ namespace Logic
         private readonly IDishCollectionDAL _DishCollectionDAL;
         public DishCollection()
         {
-            _DishCollectionDAL = DishFactory.CreateDishDAL();
+            _DishCollectionDAL = DishFactory.CreateDishCollectionDAL();
         }
 
         public void addDish(DishDTO dishDTO)
@@ -27,6 +27,11 @@ namespace Logic
         public DishDTO getDishById(int id)
         {
             return _DishCollectionDAL.getDishById(id);
+        }
+
+        public void deleteDish(int id)
+        {
+            _DishCollectionDAL.deleteDish(id);
         }
     }
 }

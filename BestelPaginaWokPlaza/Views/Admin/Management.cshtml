@@ -28,11 +28,12 @@
         <tr class="dish-item">
             <td>
                 <div class="dish-content">
+                    <input type="hidden" class="dish-id" value="@dish.id"/>
                     <h3 class="dish-name">@dish.name</h3>
                     <span class="dish-price">&#8364; @dish.price</span>
                     <div class="dish-button-actions">
-                        <button type="button" class="btn btn-sm btn-secondary">Edit</button>
-                        <button type="button" class="btn btn-sm btn-secondary">Delete</button>
+                        <button type="button" id="UpdateDish" class="btn btn-sm btn-secondary">Edit</button>
+                        <button type="button" id="DeleteDish" class="btn btn-sm btn-secondary">Delete</button>
                     </div>
                     <span class="dish-description">@dish.description</span>
                 </div>
@@ -47,6 +48,8 @@
 
 <partial name="Partials/_AddDish" />
 <partial name="Partials/_AddCategory" />
+<partial name="Partials/_UpdateDish" />
+<partial name="Partials/_DeleteDish" />
 
 <script>
     let popupcontainers = document.querySelectorAll(".pop-up-container");
@@ -56,6 +59,8 @@
             if (e.target.classList.contains("pop-up-container")) {
                 document.querySelector(".add-category").style.display = "none";
                 document.querySelector(".add-dish").style.display = "none";
+                document.querySelector(".update-dish").style.display = "none";
+                document.querySelector(".delete-dish").style.display = "none";
             }
         })
     })

@@ -7,7 +7,7 @@
     <div class="pop-up-container" id="pop-up-container">
         <div class="pop-up container">
             <h1>Nieuwe gerecht</h1>
-            <form method="post" class="dish-form" enctype="multipart/form-data" action="AddDish">
+            <form method="post" id="addDishForm" class="dish-form" enctype="multipart/form-data" action="AddDish">
                 <label class="form-control-static">Naam:*</label>
                 @Html.EditorFor(m => m.dishModel.name, new { htmlAttributes = new { @class = "form-control" }, })
                 @Html.ValidationMessageFor(m => m.dishModel.name, "", new { @class = "text-danger" }) <br />
@@ -23,7 +23,7 @@
                 @Html.EditorFor(m => m.dishModel.description, new { htmlAttributes = new { @class = "form-control" }, })
                 @Html.ValidationMessageFor(m => m.dishModel.description, "", new { @class = "text-danger" }) <br />
                 <div class="pop-up-button-field">
-                    <input class="btn btn-primary" type="submit" value="Opslaan" />
+                    <input class="btn btn-primary" onclick="replaceDotWithCommaAddDish()" type="submit" value="Opslaan" />
                     <button type="button" id="CancelDish" class="btn btn-secondary">Annuleren</button>
                 </div>
             </form> 
@@ -39,4 +39,10 @@
     document.querySelector("#CancelDish").addEventListener("click", function (e) {
         document.querySelector(".add-dish").style.display = "none";
     })
+
+    function replaceDotWithCommaAddDish() {
+        var x = document.getElementById("addDishForm");
+        var xValue = x.querySelector("#dishModel_price").value;
+        x.querySelector("#dishModel_price").value = xValue.replaceAll(".", ",");
+    }
 </script>

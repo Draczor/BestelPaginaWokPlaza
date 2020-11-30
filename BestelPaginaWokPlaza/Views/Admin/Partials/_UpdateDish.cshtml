@@ -1,0 +1,64 @@
+﻿@model BestelPaginaWokPlaza.Models.AdminViewModel
+@{
+    ViewData["Title"] = "_UpdateDish";
+
+}
+<div class="update-dish">
+    <div class="pop-up-container" id="pop-up-container update-pop-up">
+        <div class="pop-up container">
+            <h1>Gerecht wijzigen</h1>
+            <form method="post" id="updateDishForm" class="dish-form" enctype="multipart/form-data" action="UpdateDish">
+                @Html.HiddenFor(m => m.dishModel.id, new { htmlAttributes = new { @class = "form-control" }, })
+                <label class="form-control-static">Naam:*</label>
+                @Html.EditorFor(m => m.dishModel.name, new { htmlAttributes = new { @class = "form-control" }, })
+                @Html.ValidationMessageFor(m => m.dishModel.name, "", new { @class = "text-danger" }) <br />
+                <label class="form-control-static">Prijs:*</label>
+                @Html.EditorFor(m => m.dishModel.price, new { htmlAttributes = new { @class = "form-control" }, })
+                @Html.ValidationMessageFor(m => m.dishModel.price, "", new { @class = "text-danger" }) <br />
+
+                <label class="form-control-static">Categorie:*</label>
+                @Html.DropDownListFor(m => m.dishModel.category_id, new SelectList(Model.categoryList, "Value", "Text"))
+                @Html.ValidationMessageFor(m => m.dishModel.category_id, "", new { @class = "text-danger" }) <br />
+
+                <label class="form-control-static">Omschrijving:*</label>
+                @Html.EditorFor(m => m.dishModel.description, new { htmlAttributes = new { @class = "form-control" }, })
+                @Html.ValidationMessageFor(m => m.dishModel.description, "", new { @class = "text-danger" }) <br />
+                <div class="pop-up-button-field">
+                    <input class="btn btn-primary" onclick="replaceDotWithCommaUpdateDish()" type="submit" value="Opslaan" />
+                    <button type="button" id="CancelUpdateDish" class="btn btn-secondary">Annuleren</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    var items = document.querySelectorAll("#UpdateDish");
+    items.forEach(item => {
+        item.addEventListener("click", function (e) {
+            var dishContent = e.target.parentElement.parentElement;
+
+            var id = dishContent.querySelector(".dish-id").value;
+            $.post("/Admin/GetDishById", { id: id }, function (result) {
+                document.querySelector(".update-dish #dishModel_id").value = result["id"];
+                document.querySelector(".update-dish #dishModel_name").value = result["name"];
+                var price = result["price"].toString().replace(".",",");
+                document.querySelector(".update-dish #dishModel_price").value = price;
+                document.querySelector(".update-dish #dishModel_category_id").value = result["category_id"];
+                document.querySelector(".update-dish #dishModel_description").value = result["description"];
+            });
+
+            document.querySelector(".update-dish").style.display = "block";
+        })
+    });
+
+    document.querySelector("#CancelUpdateDish").addEventListener("click", function (e) {
+        document.querySelector(".update-dish").style.display = "none";
+    })
+
+    function replaceDotWithCommaUpdateDish() {
+        var x = document.getElementById("updateDishForm");
+        var xValue = x.querySelector("#dishModel_price").value;
+        x.querySelector("#dishModel_price").value = xValue.replaceAll(".", ",");
+    }
+</script>

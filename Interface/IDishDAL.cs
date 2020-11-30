@@ -6,6 +6,6 @@ namespace Interface
 {
     public interface IDishDAL
     {
-        void update();
+        void updateDish(DishDTO dishDTO);
     }
 }

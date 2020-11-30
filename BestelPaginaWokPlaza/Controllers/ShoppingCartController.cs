@@ -20,7 +20,6 @@ namespace BestelPaginaWokPlaza.Controllers
 
         public void AddToCart(int id)
         {
-
             //get
             string allcookies = Request.Cookies["winkelwagen"];
 

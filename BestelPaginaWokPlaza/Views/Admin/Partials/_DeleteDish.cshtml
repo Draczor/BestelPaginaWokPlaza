@@ -1,0 +1,43 @@
+﻿@model BestelPaginaWokPlaza.Models.AdminViewModel
+@{
+    ViewData["Title"] = "_DeleteDish";
+
+}
+<div class="delete-dish">
+    <div class="pop-up-container" id="pop-up-container update-pop-up">
+        <div class="pop-up container">
+            <h1>Gerecht verwijderen</h1>
+            <form method="post" id="deleteDishForm" class="dish-form" enctype="multipart/form-data" action="DeleteDish">
+                @Html.HiddenFor(m => m.dishModel.id, new { htmlAttributes = new { @class = "form-control" }, })
+                <p class="delete-dish-message">Weet u zeker dat u <b id="deleteDishNameMessage"></b> wilt verwijderen?</p>
+                <div class="pop-up-button-field">
+                    <input class="btn btn-primary" type="submit" value="Verwijderen" />
+                    <button type="button" id="CancelDeleteDish" class="btn btn-secondary">Annuleren</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    var items = document.querySelectorAll("#DeleteDish");
+    items.forEach(item => {
+        item.addEventListener("click", function (e) {
+            var dishContent = e.target.parentElement.parentElement;
+
+            var id = dishContent.querySelector(".dish-id").value;
+            $.post("/Admin/GetDishById", { id: id }, function (result) {
+                document.querySelector(".delete-dish #dishModel_id").value = result["id"];
+
+                var x = document.getElementById("deleteDishForm");
+                x.querySelector("#deleteDishNameMessage").innerHTML = result["name"];
+            });
+
+            document.querySelector(".delete-dish").style.display = "block";
+        })
+    });
+
+    document.querySelector("#CancelDeleteDish").addEventListener("click", function (e) {
+        document.querySelector(".delete-dish").style.display = "none";
+    })
+</script>

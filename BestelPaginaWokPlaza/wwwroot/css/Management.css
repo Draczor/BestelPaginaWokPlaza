@@ -6,12 +6,12 @@
     width: 100%;
 }
 
-.add-dish, .add-category {
+.add-dish, .add-category, .update-dish, .delete-dish {
     display: none;
 }
 
 .pop-up-container {
-    position: absolute;
+    position: fixed;
     background: rgba(0,0,0,0.7);
     width: 100vw;
     height: 100vh;
@@ -108,4 +108,10 @@
     display: block;
     width: 60px;
     margin-top: 5px;
+}
+
+.delete-dish-message {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 50px;
 }

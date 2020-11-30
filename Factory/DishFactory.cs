@@ -8,7 +8,12 @@ namespace Factory
 {
     public class DishFactory
     {
-        public static IDishCollectionDAL CreateDishDAL()
+        public static IDishCollectionDAL CreateDishCollectionDAL()
+        {
+            return new DishDAL();
+        }
+        
+        public static IDishDAL CreateDishDAL()
         {
             return new DishDAL();
         }
