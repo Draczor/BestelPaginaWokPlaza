@@ -79,6 +79,7 @@
     display: inline-block;
     width: 300px;
     font-size: 18px;
+    word-wrap: break-word;
 }
 
 .dish-price {
@@ -95,6 +96,7 @@
     display: block;
     font-size: 14px;
     width: 300px;
+    word-wrap: break-word;
 }
 
 .dish-button-actions {

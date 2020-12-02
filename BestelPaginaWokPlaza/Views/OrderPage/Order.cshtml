@@ -50,10 +50,49 @@
             result.reverse();
 
             result.forEach(item => {
-                var titel = document.createElement("p")
-                titel.innerHTML += item["name"]
+                console.log(document.querySelector(".shoppingCart #dish-" + item["id"]));
+                if (document.querySelector(".shoppingCart #dish-" + item["id"]) == null) {
+                    var dishDiv = document.createElement("div");
+                    dishDiv.className = 'shopping-cart-dish';
+                    dishDiv.id = "dish-" + item["id"];
+                    winkelwagen.append(dishDiv);
 
-                winkelwagen.append(titel);
+                    var dishAantal = document.createElement("div");
+                    dishAantal.innerHTML = result.filter(dish => dish["id"] == item["id"]).length + "x";
+                    dishAantal.className = 'shopping-cart-dish-aantal';
+                    dishDiv.append(dishAantal);
+
+                    var dishName = document.createElement("div");
+                    dishName.innerHTML = item["name"];
+                    dishName.className = 'shopping-cart-dish-name';
+                    dishDiv.append(dishName);
+
+                    var dishPrice = document.createElement("div");
+                    dishPrice.innerHTML = "&#8364; " + item["price"].toFixed(2);
+                    dishPrice.className = 'shopping-cart-dish-price';
+                    dishDiv.append(dishPrice);
+
+                    var dishButton = document.createElement("button");
+                    dishButton.className = "shopping-cart-dish-button btn btn-sm btn-danger";
+                    dishButton.addEventListener("click", function (e) {
+                        $.post("/ShoppingCart/DeleteFromCart", { id: item["id"] }, function (result) {
+                            console.log(result);
+                        });
+                        if (parseInt(dishDiv.querySelector(".shopping-cart-dish-aantal").innerHTML) <= 1) {
+                            e.target.parentElement.parentElement.removeChild(dishDiv);
+                        }
+                        else {
+                            dishDiv.querySelector(".shopping-cart-dish-aantal").innerHTML = parseInt(dishDiv.querySelector(".shopping-cart-dish-aantal").innerHTML) - 1 + "x";
+                        }
+                    })
+                    dishDiv.append(dishButton);
+
+                    var minusIcon = document.createElement("i");
+                    minusIcon.className = 'fa fa-minus shopping-cart-button-icon';
+                    dishButton.append(minusIcon);
+
+                }
+
             });
         }
     }
@@ -71,7 +110,7 @@
                 console.log(result);
                 appendShoppingCart(result);
             });
-        }, 300);
+        }, 100);
     }
    
 </script>

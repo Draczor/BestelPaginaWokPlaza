@@ -25,8 +25,36 @@ namespace BestelPaginaWokPlaza.Controllers
 
             //set
             IResponseCookies setcookies = Response.Cookies;
-            setcookies.Append("winkelwagen", id.ToString() + " " + allcookies);
+            setcookies.Append("winkelwagen", id.ToString() + "," + allcookies);
 
+        }
+
+        public void DeleteFromCart(int id)
+        {
+            List<string> allCookies;
+
+            //get
+            string cookieString = Request.Cookies["winkelwagen"];
+            allCookies = cookieString.Split(",").ToList();
+
+            string cookieToDelete = allCookies.FirstOrDefault(dishId => dishId == id.ToString());
+            allCookies.Remove(cookieToDelete);
+
+            cookieString = string.Join(",", allCookies.ToArray());
+
+            //set
+            IResponseCookies setcookies = Response.Cookies;
+            setcookies.Append("winkelwagen", cookieString);
+        }
+
+        public int CalcTotalPrice(int[] dishes)
+        {
+            foreach (int price in dishes)
+            {
+
+            }
+
+            return 1;
         }
 
         public List<DishDTO> GetAllShoppingCartItems()
@@ -35,7 +63,7 @@ namespace BestelPaginaWokPlaza.Controllers
 
             if(Request.Cookies["winkelwagen"] != null)
             {
-                List<int> dishes = Request.Cookies["winkelwagen"].Split(" ").Where(dish => dish != "").Select(dish => Convert.ToInt32(dish)).ToList();
+                List<int> dishes = Request.Cookies["winkelwagen"].Split(",").Where(dish => dish != "").Select(dish => Convert.ToInt32(dish)).ToList();
                 List<DishDTO> cartItems = new List<DishDTO>();
                 foreach (int dishId in dishes)
                 {

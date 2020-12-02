@@ -4,6 +4,7 @@
 }
 <link rel="stylesheet" href="~/css/Management.css" />
 
+<button type="button" onclick="location.href='@Url.Action("Order", "OrderPage")'" class="btn btn-link">Terug naar bestelpagina</button>
 <h1 class="title">Beheer Pagina</h1>
 <div class="row">
     <div class="col-md-6 button-field">
@@ -16,33 +17,33 @@
 
 @foreach (var category in Model.categoryList)
 {
-<table class="category-item">
-    <tr class="category-header">
-        <th class="category-name">@category.Text</th>
-    </tr>
-
-    @foreach (var dish in Model.dishList)
-    {
-        if (Convert.ToInt32(category.Value) == dish.category_id)
-        {
-        <tr class="dish-item">
-            <td>
-                <div class="dish-content">
-                    <input type="hidden" class="dish-id" value="@dish.id"/>
-                    <h3 class="dish-name">@dish.name</h3>
-                    <span class="dish-price">&#8364; @dish.price</span>
-                    <div class="dish-button-actions">
-                        <button type="button" id="UpdateDish" class="btn btn-sm btn-secondary">Edit</button>
-                        <button type="button" id="DeleteDish" class="btn btn-sm btn-secondary">Delete</button>
-                    </div>
-                    <span class="dish-description">@dish.description</span>
-                </div>
-            </td>
-
+    <table class="category-item">
+        <tr class="category-header">
+            <th class="category-name">@category.Text</th>
         </tr>
+
+        @foreach (var dish in Model.dishList)
+        {
+            if (Convert.ToInt32(category.Value) == dish.category_id)
+            {
+                <tr class="dish-item">
+                    <td>
+                        <div class="dish-content">
+                            <input type="hidden" class="dish-id" value="@dish.id" />
+                            <h3 class="dish-name">@dish.name</h3>
+                            <span class="dish-price">&#8364; @dish.price</span>
+                            <div class="dish-button-actions">
+                                <button type="button" id="UpdateDish" class="btn btn-sm btn-secondary">Edit</button>
+                                <button type="button" id="DeleteDish" class="btn btn-sm btn-secondary">Delete</button>
+                            </div>
+                            <span class="dish-description">@dish.description</span>
+                        </div>
+                    </td>
+
+                </tr>
+            }
         }
-    }
-</table>
+    </table>
 }
 
 

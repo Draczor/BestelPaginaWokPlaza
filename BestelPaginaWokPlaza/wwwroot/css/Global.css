@@ -1,6 +1,7 @@
 ﻿.head-container {
     padding-top: 50px;
     background: white;
+    padding-bottom: 50px;
 }
 
 .title {
@@ -9,7 +10,13 @@
 }
 
 .order-body {
-    background: url("../images/background.jpg") center center;
+    /*background: url("../images/background.jpg") center center;*/
+    background: #940F10;
     background-size: cover;
     margin-bottom: 0px;
+}
+
+body {
+    margin-bottom: 0px;
+    background-color: #940F10;
 }
