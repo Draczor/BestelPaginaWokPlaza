@@ -14,8 +14,16 @@ namespace Logic
             _DishCollectionDAL = DishFactory.CreateDishCollectionDAL();
         }
 
-        public void addDish(DishDTO dishDTO)
+        public void addDish(Dish dish)
         {
+            DishDTO dishDTO = new DishDTO
+            {
+                name = dish.name,
+                price = dish.price,
+                category_id = dish.category_id,
+                description = dish.description
+            };
+
             _DishCollectionDAL.addDish(dishDTO);
         }
 
@@ -24,9 +32,21 @@ namespace Logic
             return _DishCollectionDAL.getDishList();
         }
 
-        public DishDTO getDishById(int id)
+        public Dish getDishById(int id)
         {
-            return _DishCollectionDAL.getDishById(id);
+            DishDTO dish =_DishCollectionDAL.getDishById(id);
+            if (dish != null)
+            {
+                return new Dish
+                {
+                    id = dish.id,
+                    name = dish.name,
+                    price = dish.price,
+                    category_id = dish.category_id,
+                    description = dish.description
+                };
+            }
+            return null;
         }
 
         public void deleteDish(int id)

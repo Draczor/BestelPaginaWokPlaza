@@ -42,8 +42,9 @@
             $.post("/Admin/GetDishById", { id: id }, function (result) {
                 document.querySelector(".update-dish #dishModel_id").value = result["id"];
                 document.querySelector(".update-dish #dishModel_name").value = result["name"];
-                var price = result["price"].toString().replace(".",",");
-                document.querySelector(".update-dish #dishModel_price").value = price;
+                var price = parseFloat(result["price"]).toFixed(2);
+                var priceAfterReplace = price.toString().replace(".", ",");
+                document.querySelector(".update-dish #dishModel_price").value = priceAfterReplace;
                 document.querySelector(".update-dish #dishModel_category_id").value = result["category_id"];
                 document.querySelector(".update-dish #dishModel_description").value = result["description"];
             });

@@ -42,7 +42,7 @@ namespace BestelPaginaWokPlaza.Controllers
             }
 
             DishCollection dishCollection = new DishCollection();
-            dishCollection.addDish(new DishDTO { 
+            dishCollection.addDish(new Dish { 
                 name = adminViewModel.dishModel.name, 
                 price = adminViewModel.dishModel.price, 
                 category_id = adminViewModel.dishModel.category_id, 
@@ -76,7 +76,7 @@ namespace BestelPaginaWokPlaza.Controllers
         }
 
         [HttpPost]
-        public DishDTO GetDishById(int id)
+        public Dish GetDishById(int id)
         {
             DishCollection dishCollection = new DishCollection();
 
@@ -93,14 +93,13 @@ namespace BestelPaginaWokPlaza.Controllers
         public IActionResult UpdateDish(AdminViewModel adminViewModel)
         {
             Dish dish = new Dish();
+            dish.id = adminViewModel.dishModel.id;
+            dish.name = adminViewModel.dishModel.name;
+            dish.price = adminViewModel.dishModel.price;
+            dish.category_id = adminViewModel.dishModel.category_id;
+            dish.description = adminViewModel.dishModel.description;
+            dish.updateDish();
 
-            dish.updateDish(new DishDTO { 
-                id = adminViewModel.dishModel.id,
-                name = adminViewModel.dishModel.name,
-                price = adminViewModel.dishModel.price,
-                category_id = adminViewModel.dishModel.category_id,
-                description = adminViewModel.dishModel.description,
-            });
             return RedirectToAction("Management", "Admin");
         }
 

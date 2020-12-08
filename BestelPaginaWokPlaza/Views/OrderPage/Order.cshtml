@@ -9,14 +9,28 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-3 navigation-column">
-            <h5>Categorie navigatie</h5>
+            <h5>Menukaart</h5>
+
+            <nav class="sidebar-nav">
+                <div class="navbar navbar-default item-menu" role="navigation">
+                    <div class="navbar-collapse sidebar-navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            @foreach (var category in Model.categoryList)
+                            {
+                                <li class="nav-item"><a href="#menu-@category.Value">@category.Text</a></li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
         </div>
         <div class="col-lg-6 dish-column">
             @foreach (var category in Model.categoryList)
             {
                 <table class="category-item">
                     <tr class="category-header">
-                        <th class="category-name">@category.Text</th>
+                        <th class="category-name" id="menu-@category.Value">@category.Text</th>
                     </tr>
 
                     @foreach (DishModel dish in Model.dishList)
@@ -44,7 +58,7 @@
 <script>
 
     function appendShoppingCart(result) {
-        const winkelwagen = document.querySelector(".shoppingCart")
+        const winkelwagen = document.querySelector(".shoppingCart");
         winkelwagen.innerHTML = "";
         if (result != null) {
             result.reverse();
@@ -68,7 +82,8 @@
                     dishDiv.append(dishName);
 
                     var dishPrice = document.createElement("div");
-                    dishPrice.innerHTML = "&#8364; " + item["price"].toFixed(2);
+                    var dishTotalPrice = result.filter(dish => dish["id"] == item["id"]).length * item["price"];
+                    dishPrice.innerHTML = "&#8364; " + dishTotalPrice.toFixed(2);
                     dishPrice.className = 'shopping-cart-dish-price';
                     dishDiv.append(dishPrice);
 
@@ -76,14 +91,23 @@
                     dishButton.className = "shopping-cart-dish-button btn btn-sm btn-danger";
                     dishButton.addEventListener("click", function (e) {
                         $.post("/ShoppingCart/DeleteFromCart", { id: item["id"] }, function (result) {
-                            console.log(result);
+                            if (parseInt(dishDiv.querySelector(".shopping-cart-dish-aantal").innerHTML) <= 1) {
+                                document.getElementById("dish-" + item["id"]).remove();
+                                $.get("/ShoppingCart/CalcTotalPrice", function (result) {
+                                    document.getElementById("total-price").innerHTML = "&#8364; " + parseFloat(result).toFixed(2);
+                                });
+                            }
+                            else {
+                                dishDiv.querySelector(".shopping-cart-dish-aantal").innerHTML = parseInt(dishDiv.querySelector(".shopping-cart-dish-aantal").innerHTML) - 1 + "x";
+                                let price = dishDiv.querySelector(".shopping-cart-dish-price").innerHTML.replace("€", "");
+                                dishDiv.querySelector(".shopping-cart-dish-price").innerHTML = "&#8364; " + (price - item["price"]).toFixed(2);
+
+                                $.get("/ShoppingCart/CalcTotalPrice", function (result) {
+                                    document.getElementById("total-price").innerHTML = "&#8364; " + parseFloat(result).toFixed(2);
+                                });
+                            }
                         });
-                        if (parseInt(dishDiv.querySelector(".shopping-cart-dish-aantal").innerHTML) <= 1) {
-                            e.target.parentElement.parentElement.removeChild(dishDiv);
-                        }
-                        else {
-                            dishDiv.querySelector(".shopping-cart-dish-aantal").innerHTML = parseInt(dishDiv.querySelector(".shopping-cart-dish-aantal").innerHTML) - 1 + "x";
-                        }
+                        
                     })
                     dishDiv.append(dishButton);
 
@@ -92,7 +116,6 @@
                     dishButton.append(minusIcon);
 
                 }
-
             });
         }
     }
@@ -103,6 +126,9 @@
         console.log(dishId);
         $.post("/ShoppingCart/AddToCart", { id: dishId }, function (result) {
             console.log(result);
+            $.get("/ShoppingCart/CalcTotalPrice", function (result) {
+                document.getElementById("total-price").innerHTML = "&#8364; " + parseFloat(result).toFixed(2);
+            });
         });
 
         setTimeout(function() {

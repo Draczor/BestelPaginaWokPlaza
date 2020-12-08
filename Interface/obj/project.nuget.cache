@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "QRbBtwZ8Zg+zwN2pel6MsvN2TrHEd4TOMwBuQj5s8GguUwSKIEf7/iTOrOjcsCoMrQ7dt5QfUMBL1vmN7QJCvg==",
+  "dgSpecHash": "jqGjtILJz3V+SeqkaW61QlL89Cg2Gw872uxzevFkGs3NA98voP4GdkOXfEhAuBVmHDP6/SiKNTOgiiQAfjr08g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj",
+  "projectFilePath": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Lei\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Lei\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

@@ -148,3 +148,15 @@
     margin: 15px auto 15px auto;
     width: 100%;
 }
+
+.total-price {
+    float: right;
+    margin-right: 20px;
+}
+
+.item-menu {
+    margin-top: 30px;
+    border: 1px solid #D0E7F2;
+    background: #E9F2F7;
+    border-radius: 10px;
+}

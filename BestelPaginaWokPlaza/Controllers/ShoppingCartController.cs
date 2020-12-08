@@ -47,27 +47,31 @@ namespace BestelPaginaWokPlaza.Controllers
             setcookies.Append("winkelwagen", cookieString);
         }
 
-        public int CalcTotalPrice(int[] dishes)
+        public decimal CalcTotalPrice()
         {
-            foreach (int price in dishes)
-            {
+            List<decimal> allDishPrices = GetAllShoppingCartItems().Select(item => item.price).ToList();
 
+            decimal totalPrice = 2;
+
+            foreach (decimal price in allDishPrices)
+            {
+                totalPrice += price;
             }
 
-            return 1;
+            return totalPrice;
         }
 
-        public List<DishDTO> GetAllShoppingCartItems()
+        public List<Dish> GetAllShoppingCartItems()
         {
             DishCollection dishCollection = new DishCollection();
 
             if(Request.Cookies["winkelwagen"] != null)
             {
                 List<int> dishes = Request.Cookies["winkelwagen"].Split(",").Where(dish => dish != "").Select(dish => Convert.ToInt32(dish)).ToList();
-                List<DishDTO> cartItems = new List<DishDTO>();
+                List<Dish> cartItems = new List<Dish>();
                 foreach (int dishId in dishes)
                 {
-                    DishDTO dish = dishCollection.getDishById(dishId);
+                    Dish dish = dishCollection.getDishById(dishId);
                     cartItems.Add(dish);
                 }
 

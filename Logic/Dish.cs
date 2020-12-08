@@ -8,14 +8,28 @@ namespace Logic
 {
     public class Dish
     {
+        public int id { get; set; }
+        public string name { get; set; }
+        public decimal price { get; set; }
+        public int category_id { get; set; }
+        public string description { get; set; }
+
         private readonly IDishDAL _IDishDAL;
         public Dish()
         {
             _IDishDAL = DishFactory.CreateDishDAL();
         }
 
-        public void updateDish(DishDTO dishDTO)
+        public void updateDish()
         {
+            DishDTO dishDTO = new DishDTO 
+            {
+               id = id,
+               name = name,
+               price = price,
+               category_id = category_id,
+               description = description
+            };
             _IDishDAL.updateDish(dishDTO);
         }
     }
