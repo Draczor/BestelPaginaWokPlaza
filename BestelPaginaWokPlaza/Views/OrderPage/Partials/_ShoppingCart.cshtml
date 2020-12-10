@@ -12,7 +12,7 @@
         <p class="shopping-cart-delivery-cost">Bezorgkosten:<span>&#8364; 2.00</span></p>
         <p class="shopping-cart-total-price">Totaalbedrag:<span class="total-price" id="total-price"></span> </p>
 
-        <button type="button" class="btn btn-success pay-button">Afrekenen</button>
+        <button type="button" onclick="location.href='@Url.Action("CheckOut", "OrderPage")'" class="btn btn-success pay-button">Afrekenen</button>
     </div>
 </div>
 

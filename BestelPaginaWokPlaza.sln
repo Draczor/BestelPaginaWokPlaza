@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic", "Logic\Logic.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{7C76FA54-DA7E-4722-9603-79CF90058817}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interface", "Interface\Interface.csproj", "{221746A3-0B1D-44EC-B7DC-21581776D4EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interface", "Interface\Interface.csproj", "{221746A3-0B1D-44EC-B7DC-21581776D4EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factory", "Factory\Factory.csproj", "{E1948F0D-52B1-4572-B454-909BF137EBB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Factory", "Factory\Factory.csproj", "{E1948F0D-52B1-4572-B454-909BF137EBB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{FB4763DB-9C8F-4F9D-BFF4-20087AF8FB04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{E1948F0D-52B1-4572-B454-909BF137EBB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1948F0D-52B1-4572-B454-909BF137EBB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1948F0D-52B1-4572-B454-909BF137EBB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB4763DB-9C8F-4F9D-BFF4-20087AF8FB04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB4763DB-9C8F-4F9D-BFF4-20087AF8FB04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB4763DB-9C8F-4F9D-BFF4-20087AF8FB04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB4763DB-9C8F-4F9D-BFF4-20087AF8FB04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

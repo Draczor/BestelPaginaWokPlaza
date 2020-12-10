@@ -52,5 +52,11 @@ namespace BestelPaginaWokPlaza.Controllers
 
             return RedirectToAction("Order", "OrderPage");
         }
+
+        public IActionResult CheckOut()
+        {
+
+            return View();
+        }
     }
 }

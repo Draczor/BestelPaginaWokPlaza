@@ -49,16 +49,19 @@ namespace BestelPaginaWokPlaza.Controllers
 
         public decimal CalcTotalPrice()
         {
-            List<decimal> allDishPrices = GetAllShoppingCartItems().Select(item => item.price).ToList();
+            List<decimal> allDishPrices = GetAllShoppingCartItems()?.Select(item => item.price).ToList();
 
             decimal totalPrice = 2;
 
-            foreach (decimal price in allDishPrices)
+            if (allDishPrices != null)
             {
-                totalPrice += price;
+                foreach (decimal price in allDishPrices)
+                {
+                    totalPrice += price;
+                }
             }
-
             return totalPrice;
+
         }
 
         public List<Dish> GetAllShoppingCartItems()

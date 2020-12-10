@@ -1,0 +1,54 @@
+﻿@model BestelPaginaWokPlaza.Models.OrderViewModel
+@{
+}
+
+<div class="checkOut-container">
+    <div class="row">
+        <div class="col-lg-9">
+            <h2>Bestelling afronden</h2>
+            <form method="post" id="" class="" enctype="multipart/form-data" action="CheckOut">
+
+                <div class="customer-section">
+                    <h4>Uw gegevens</h4>
+                    <label class="form-control-static">Naam:*</label>
+                    @Html.EditorFor(m => m.customerModel.name, new { htmlAttributes = new { @class = "form-control" }, })
+                    @Html.ValidationMessageFor(m => m.customerModel.name, "", new { @class = "text-danger" }) <br />
+                    <label class="form-control-static">Straatnaam en huisnummer:*</label>
+                    @Html.EditorFor(m => m.customerModel.street_housenr, new { htmlAttributes = new { @class = "form-control" }, })
+                    @Html.ValidationMessageFor(m => m.customerModel.street_housenr, "", new { @class = "text-danger" }) <br />
+                    <label class="form-control-static">Postcode:*</label>
+                    @Html.EditorFor(m => m.customerModel.postal_code, new { htmlAttributes = new { @class = "form-control" }, })
+                    @Html.ValidationMessageFor(m => m.customerModel.postal_code, "", new { @class = "text-danger" }) <br />
+                    <label class="form-control-static">Plaatsnaam:*</label>
+                    @Html.EditorFor(m => m.customerModel.place, new { htmlAttributes = new { @class = "form-control" }, })
+                    @Html.ValidationMessageFor(m => m.customerModel.place, "", new { @class = "text-danger" }) <br />
+                    <label class="form-control-static">Email:*</label>
+                    @Html.EditorFor(m => m.customerModel.email, new { htmlAttributes = new { @class = "form-control" }, })
+                    @Html.ValidationMessageFor(m => m.customerModel.email, "", new { @class = "text-danger" }) <br />
+                    <label class="form-control-static">Telefoonnummer:*</label>
+                    @Html.EditorFor(m => m.customerModel.phone_numer, new { htmlAttributes = new { @class = "form-control" }, })
+                    @Html.ValidationMessageFor(m => m.customerModel.phone_numer, "", new { @class = "text-danger" }) <br />
+                </div>
+
+                <div class="order-section">
+                    <h4>Bestelgegevens</h4>
+                    <label class="form-control-static">Bezorgtijd:*</label>
+                    @Html.EditorFor(m => m.orderModel.delivery_time, new { htmlAttributes = new { @class = "form-control" }, })
+                    @Html.ValidationMessageFor(m => m.orderModel.delivery_time, "", new { @class = "text-danger" }) <br />
+                    <label class="form-control-static">Betaalwijze:*</label>
+                    @Html.EditorFor(m => m.orderModel.payment_option, new { htmlAttributes = new { @class = "form-control" }, })
+                    @Html.ValidationMessageFor(m => m.orderModel.payment_option, "", new { @class = "text-danger" }) <br />
+                    <label class="form-control-static">Opmerkingen:*</label>
+                    @Html.EditorFor(m => m.orderModel.remarks, new { htmlAttributes = new { @class = "form-control" }, })
+                    @Html.ValidationMessageFor(m => m.orderModel.remarks, "", new { @class = "text-danger" }) <br />
+                </div>
+
+                <div class="">
+                    <input class="btn btn-primary" type="submit" value="Bestellen" />
+                </div>
+            </form>
+        </div>
+
+        <partial name="Partials/_ShoppingCart" />
+    </div>
+</div>
