@@ -13,6 +13,6 @@ namespace BestelPaginaWokPlaza.Models
         public string postal_code { get; set; }
         public string place { get; set; }
         public string email { get; set; }
-        public string phone_numer { get; set; }
+        public string phone_number { get; set; }
     }
 }

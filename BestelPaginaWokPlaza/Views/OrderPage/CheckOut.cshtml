@@ -2,10 +2,13 @@
 @{
 }
 
+<link rel="stylesheet" href="~/css/CheckOutPage.css" />
+
 <div class="checkOut-container">
     <div class="row">
         <div class="col-lg-9">
-            <h2>Bestelling afronden</h2>
+            <button type="button" onclick="location.href='@Url.Action("Order", "OrderPage")'" class="btn btn-link">Terug naar bestelpagina</button>
+            <h2 class="checkOut-title">Bestelling afronden</h2>
             <form method="post" id="" class="" enctype="multipart/form-data" action="CheckOut">
 
                 <div class="customer-section">
@@ -26,8 +29,8 @@
                     @Html.EditorFor(m => m.customerModel.email, new { htmlAttributes = new { @class = "form-control" }, })
                     @Html.ValidationMessageFor(m => m.customerModel.email, "", new { @class = "text-danger" }) <br />
                     <label class="form-control-static">Telefoonnummer:*</label>
-                    @Html.EditorFor(m => m.customerModel.phone_numer, new { htmlAttributes = new { @class = "form-control" }, })
-                    @Html.ValidationMessageFor(m => m.customerModel.phone_numer, "", new { @class = "text-danger" }) <br />
+                    @Html.EditorFor(m => m.customerModel.phone_number, new { htmlAttributes = new { @class = "form-control" }, })
+                    @Html.ValidationMessageFor(m => m.customerModel.phone_number, "", new { @class = "text-danger" }) <br />
                 </div>
 
                 <div class="order-section">
@@ -43,12 +46,32 @@
                     @Html.ValidationMessageFor(m => m.orderModel.remarks, "", new { @class = "text-danger" }) <br />
                 </div>
 
-                <div class="">
-                    <input class="btn btn-primary" type="submit" value="Bestellen" />
+                <div class="checkOut-button-field">
+                    <input class="btn btn-primary checkOut-button" type="submit" value="Bestellen" />
                 </div>
             </form>
         </div>
 
-        <partial name="Partials/_ShoppingCart" />
+        <div class="col-lg-3 shoppingCart-column">
+            <h5>Winkelmandje</h5>
+
+            <div class="shoppingCart">
+
+            </div>
+
+            <div class="shopping-cart-details">
+                <partial name="Partials/_ShoppingCartDetails" />
+            </div>
+        </div>
     </div>
 </div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/ShoppingCart.js"></script>
+
+<script>
+    $.get("/ShoppingCart/GetAllShoppingCartItems", function (result) {
+        console.log(result);
+        appendShoppingCart(result);
+    });
+</script>

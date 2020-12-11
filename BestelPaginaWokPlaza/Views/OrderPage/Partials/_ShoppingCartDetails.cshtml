@@ -1,0 +1,14 @@
+﻿
+@{
+}
+
+<p class="shopping-cart-delivery-cost">Bezorgkosten:<span>&#8364; 2.00</span></p>
+<p class="shopping-cart-total-price">Totaalbedrag:<span class="total-price" id="total-price"></span> </p>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script>
+
+    $.get("/ShoppingCart/CalcTotalPrice", function (result) {
+        document.getElementById("total-price").innerHTML = "&#8364; " + parseFloat(result).toFixed(2);
+    });
+</script>

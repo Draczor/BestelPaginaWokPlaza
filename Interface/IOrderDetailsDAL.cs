@@ -7,7 +7,5 @@ namespace Interface
     public interface IOrderDetailsDAL
     {
         void setDishList();
-        void calcTotalPrice();
-        void setStatus();
     }
 }

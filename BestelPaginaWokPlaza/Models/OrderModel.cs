@@ -11,6 +11,7 @@ namespace BestelPaginaWokPlaza.Models
         public int customer_id { get; set; }
         public decimal total_price { get; set; }
         public string payment_option { get; set; }
+        public string status { get; set; }
         public string delivery_time { get; set; }
         public string remarks { get; set; }
         public DateTime dateTime { get; set; }
