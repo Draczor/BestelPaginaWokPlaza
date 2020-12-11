@@ -133,3 +133,4 @@ C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\
 C:\Users\Lei\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\netcoreapp3.1\Razor\Views\OrderPage\CheckOut.cshtml.g.cs
 C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\netcoreapp3.1\Razor\Views\OrderPage\CheckOut.cshtml.g.cs
 C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\netcoreapp3.1\Razor\Views\OrderPage\Partials\_ShoppingCartDetails.cshtml.g.cs
+C:\Users\Lei\source\repos\BestelPaginaWokPlaza\BestelPaginaWokPlaza\obj\Debug\netcoreapp3.1\Razor\Views\OrderPage\Partials\_ShoppingCartDetails.cshtml.g.cs

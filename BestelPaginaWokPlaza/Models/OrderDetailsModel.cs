@@ -9,7 +9,7 @@ namespace BestelPaginaWokPlaza.Models
     {
         public int id { get; set; }
         public int dish_id { get; set; }
-        public decimal order_id { get; set; }
+        public int order_id { get; set; }
         public int quantity { get; set; }
     }
 }

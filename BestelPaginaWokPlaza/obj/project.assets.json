@@ -629,23 +629,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lzhen\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Lei\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza.csproj",
+      "projectUniqueName": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza.csproj",
       "projectName": "BestelPaginaWokPlaza",
-      "projectPath": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza.csproj",
-      "packagesPath": "C:\\Users\\lzhen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza\\obj\\",
+      "projectPath": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza.csproj",
+      "packagesPath": "C:\\Users\\Lei\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\lzhen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Lei\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -657,12 +653,13 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj": {
-              "projectPath": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj"
+            "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj": {
+              "projectPath": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Interface\\Interface.csproj"
             },
-            "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Logic\\Logic.csproj": {
-              "projectPath": "C:\\Users\\lzhen\\source\\repos\\BestelPaginaWokPlaza\\Logic\\Logic.csproj"
+            "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Logic\\Logic.csproj": {
+              "projectPath": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\Logic\\Logic.csproj"
             }
           }
         }
@@ -675,6 +672,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.AspNet.WebPages": {
             "target": "Package",
@@ -703,7 +701,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   },

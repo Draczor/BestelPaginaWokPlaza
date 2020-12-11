@@ -65,6 +65,7 @@ namespace BestelPaginaWokPlaza.Controllers
             OrderDTO orderDTO = new OrderDTO();
             orderDTO.customer_id = customer.addCustommer(customerDTO);
             orderDTO.total_price = 10.5M;
+            //orderDTO.total_price = shoppingCartController.CalcTotalPrice();
             orderDTO.payment_option = orderViewModel.orderModel.payment_option;
             orderDTO.status = "Nieuw";
             orderDTO.delivery_time = orderViewModel.orderModel.delivery_time;
