@@ -14,9 +14,9 @@ namespace Logic
             _OrderDAL = OrderFactory.CreateOrderDAL();
         }
 
-        public void placeOrder(OrderDTO orderDTO)
+        public int placeOrder(OrderDTO orderDTO)
         {
-            _OrderDAL.placeOrder(orderDTO);
+            return _OrderDAL.placeOrderAndReturnLastID(orderDTO);
         }
     }
 }

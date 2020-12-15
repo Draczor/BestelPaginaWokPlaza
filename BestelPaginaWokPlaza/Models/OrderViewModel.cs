@@ -10,5 +10,6 @@ namespace BestelPaginaWokPlaza.Models
         public CustomerModel customerModel { get; set; }
         public OrderModel orderModel { get; set; }
         public OrderDetailsModel orderDetailsModel { get; set; }
+        public List<string> time_list { get; set; }
     }
 }

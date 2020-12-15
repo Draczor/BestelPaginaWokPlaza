@@ -43,8 +43,21 @@ namespace BestelPaginaWokPlaza.Controllers
         [HttpGet]
         public IActionResult CheckOut()
         {
+            OrderViewModel orderViewModel = new OrderViewModel();
 
-            return View();
+            var startTime = DateTime.Parse("16:00");
+            var endTime = DateTime.Parse("20:00");
+            List<string> time_list = new List<string>();
+
+            while (startTime < endTime)
+            {
+
+                time_list.Add(startTime.ToShortTimeString());
+                startTime = startTime.AddMinutes(15);
+            }
+            orderViewModel.time_list = time_list;
+
+            return View(orderViewModel);
         }
 
         [HttpPost]
@@ -59,13 +72,11 @@ namespace BestelPaginaWokPlaza.Controllers
             customerDTO.phone_number = orderViewModel.customerModel.phone_number;
 
             Customer customer = new Customer();
-            //customer.addCustommer(customerDTO);
             ShoppingCartController shoppingCartController = new ShoppingCartController();
 
             OrderDTO orderDTO = new OrderDTO();
             orderDTO.customer_id = customer.addCustommer(customerDTO);
-            orderDTO.total_price = 10.5M;
-            //orderDTO.total_price = shoppingCartController.CalcTotalPrice();
+            orderDTO.total_price = shoppingCartController.CalcTotalPrice(Request.Cookies["winkelwagen"]);
             orderDTO.payment_option = orderViewModel.orderModel.payment_option;
             orderDTO.status = "Nieuw";
             orderDTO.delivery_time = orderViewModel.orderModel.delivery_time;
@@ -73,7 +84,21 @@ namespace BestelPaginaWokPlaza.Controllers
             orderDTO.dateTime = DateTime.Now;
 
             Order order = new Order();
-            order.placeOrder(orderDTO);
+            int lastInsertedOrderID = order.placeOrder(orderDTO);
+
+            List<Dish> DishList = shoppingCartController.GetAllShoppingCartItems(Request.Cookies["winkelwagen"]);
+            var groupedDishList = DishList.GroupBy(u => u.id).Select(grp => grp.ToList()).ToList();
+
+            foreach (List<Dish> dishList in groupedDishList)
+            {
+                OrderDetailsDTO orderDetailsDTO = new OrderDetailsDTO();
+                orderDetailsDTO.dish_id = dishList[0].id;
+                orderDetailsDTO.order_id = lastInsertedOrderID;
+                orderDetailsDTO.quantity = dishList.Count();
+
+                OrderDetails orderDetails = new OrderDetails();
+                orderDetails.insertOrderDetails(orderDetailsDTO);
+            }
 
             return RedirectToAction("Order", "OrderPage");
         }

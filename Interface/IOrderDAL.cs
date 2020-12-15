@@ -7,6 +7,6 @@ namespace Interface
     public interface IOrderDAL
     {
         void getOrderDetails();
-        void placeOrder(OrderDTO orderDTO);
+        int placeOrderAndReturnLastID(OrderDTO orderDTO);
     }
 }

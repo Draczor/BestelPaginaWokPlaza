@@ -11,7 +11,7 @@ namespace DAL
     {
         private readonly SqlCommand cmd = new SqlCommand();
 
-        public int addCustomerAndReturnID(CustomerDTO customerDTO)
+        public int addCustomerAndReturnLastID(CustomerDTO customerDTO)
         {
             cmd.CommandText = @"INSERT INTO Customer (name, street_housenr, postal_code, place, email, phone_number) VALUES (@name, @street_housenr, @postal_code, @place, @email, @phone_number) SELECT SCOPE_IDENTITY() AS lastID";
             cmd.Parameters.AddWithValue("@name", customerDTO.name);

@@ -12,5 +12,9 @@ namespace Factory
         {
             return new OrderDAL();
         }
+        public static IOrderDetailsDAL CreateOrderDetailsDAL()
+        {
+            return new OrderDAL();
+        }
     }
 }

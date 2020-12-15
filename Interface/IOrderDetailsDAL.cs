@@ -6,6 +6,6 @@ namespace Interface
 {
     public interface IOrderDetailsDAL
     {
-        void setDishList();
+        void insertOrderDetails(OrderDetailsDTO orderDetailsDTO);
     }
 }

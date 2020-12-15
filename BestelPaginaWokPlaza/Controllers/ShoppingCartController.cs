@@ -47,9 +47,14 @@ namespace BestelPaginaWokPlaza.Controllers
             setcookies.Append("winkelwagen", cookieString);
         }
 
-        public decimal CalcTotalPrice()
+        public decimal CalcTotalPrice(string Cookies)
         {
-            List<decimal> allDishPrices = GetAllShoppingCartItems()?.Select(item => item.price).ToList();
+            if (Cookies == null)
+            {
+                Cookies = Request.Cookies["winkelwagen"];
+            }
+
+            List<decimal> allDishPrices = GetAllShoppingCartItems(Cookies)?.Select(item => item.price).ToList();
 
             decimal totalPrice = 2;
 
@@ -61,16 +66,20 @@ namespace BestelPaginaWokPlaza.Controllers
                 }
             }
             return totalPrice;
-
         }
 
-        public List<Dish> GetAllShoppingCartItems()
+        public List<Dish> GetAllShoppingCartItems(string Cookies)
         {
             DishCollection dishCollection = new DishCollection();
 
-            if(Request.Cookies["winkelwagen"] != null)
+            if (Cookies == null)
             {
-                List<int> dishes = Request.Cookies["winkelwagen"].Split(",").Where(dish => dish != "").Select(dish => Convert.ToInt32(dish)).ToList();
+                Cookies = Request.Cookies["winkelwagen"];
+            }
+
+            if (Cookies != null)
+            {
+                List<int> dishes = Cookies.Split(",").Where(dish => dish != "").Select(dish => Convert.ToInt32(dish)).ToList();
                 List<Dish> cartItems = new List<Dish>();
                 foreach (int dishId in dishes)
                 {

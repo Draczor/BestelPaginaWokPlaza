@@ -26,7 +26,7 @@
                     @Html.EditorFor(m => m.customerModel.place, new { htmlAttributes = new { @class = "form-control" }, })
                     @Html.ValidationMessageFor(m => m.customerModel.place, "", new { @class = "text-danger" }) <br />
                     <label class="form-control-static">Email:*</label>
-                    @Html.EditorFor(m => m.customerModel.email, new { htmlAttributes = new { @class = "form-control" }, })
+                    @Html.TextBoxFor(m => m.customerModel.email, new { @type = "email" , @class="form-control" })
                     @Html.ValidationMessageFor(m => m.customerModel.email, "", new { @class = "text-danger" }) <br />
                     <label class="form-control-static">Telefoonnummer:*</label>
                     @Html.EditorFor(m => m.customerModel.phone_number, new { htmlAttributes = new { @class = "form-control" }, })
@@ -36,13 +36,16 @@
                 <div class="order-section">
                     <h4>Bestelgegevens</h4>
                     <label class="form-control-static">Bezorgtijd:*</label>
-                    @Html.EditorFor(m => m.orderModel.delivery_time, new { htmlAttributes = new { @class = "form-control" }, })
+                    @Html.DropDownListFor(m => m.orderModel.delivery_time, new SelectList(Model.time_list))
+
                     @Html.ValidationMessageFor(m => m.orderModel.delivery_time, "", new { @class = "text-danger" }) <br />
                     <label class="form-control-static">Betaalwijze:*</label>
-                    @Html.EditorFor(m => m.orderModel.payment_option, new { htmlAttributes = new { @class = "form-control" }, })
+                    @Html.Label("Contant:") @Html.RadioButtonFor(m => m.orderModel.payment_option, "Contant", new { @class = "payment-option-radio-button" })
+                    @Html.Label("iDEAL:") @Html.RadioButtonFor(m => m.orderModel.payment_option, "iDEAL", new { @class = "payment-option-radio-button" })
+                    @Html.Label("CreditCard:") @Html.RadioButtonFor(m => m.orderModel.payment_option, "Creditcard", new { @class = "payment-option-radio-button" })
                     @Html.ValidationMessageFor(m => m.orderModel.payment_option, "", new { @class = "text-danger" }) <br />
                     <label class="form-control-static">Opmerkingen:*</label>
-                    @Html.EditorFor(m => m.orderModel.remarks, new { htmlAttributes = new { @class = "form-control" }, })
+                    @Html.TextAreaFor(m => m.orderModel.remarks, new { htmlAttributes = new { @class = "form-control" }, })
                     @Html.ValidationMessageFor(m => m.orderModel.remarks, "", new { @class = "text-danger" }) <br />
                 </div>
 

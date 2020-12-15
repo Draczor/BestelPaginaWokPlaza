@@ -6,6 +6,6 @@ namespace Interface
 {
     public interface ICustomerDAL
     {
-        int addCustomerAndReturnID(CustomerDTO customerDTO);
+        int addCustomerAndReturnLastID(CustomerDTO customerDTO);
     }
 }

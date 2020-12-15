@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Interface;
+using Factory;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,5 +8,15 @@ namespace Logic
 {
     public class OrderDetails
     {
+        private readonly IOrderDetailsDAL _OrderDetailsDAL;
+        public OrderDetails()
+        {
+            _OrderDetailsDAL = OrderFactory.CreateOrderDetailsDAL();
+        }
+
+        public void insertOrderDetails(OrderDetailsDTO orderDetailsDTO)
+        {
+            _OrderDetailsDAL.insertOrderDetails(orderDetailsDTO);
+        }
     }
 }

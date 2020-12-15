@@ -17,7 +17,7 @@ namespace Logic
 
         public int addCustommer(CustomerDTO customer)
         {
-            return _CustomerDAL.addCustomerAndReturnID(customer);
+            return _CustomerDAL.addCustomerAndReturnLastID(customer);
         }
     }
 }

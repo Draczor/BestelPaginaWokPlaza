@@ -15,3 +15,4 @@ C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\Interface\obj\Debug\netstandard
 C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\Interface\obj\Debug\netstandard2.0\Interface.dll
 C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\Interface\obj\Debug\netstandard2.0\Interface.pdb
 C:\Users\lzhen\source\repos\BestelPaginaWokPlaza\Interface\obj\Debug\netstandard2.0\Interface.csprojAssemblyReference.cache
+C:\Users\Lei\source\repos\BestelPaginaWokPlaza\Interface\obj\Debug\netstandard2.0\Interface.csprojAssemblyReference.cache
