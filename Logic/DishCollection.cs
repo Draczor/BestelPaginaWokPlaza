@@ -13,6 +13,10 @@ namespace Logic
         {
             _DishCollectionDAL = DishFactory.CreateDishCollectionDAL();
         }
+        public DishCollection(IDishCollectionDAL iDischCollectionDAL)
+        {
+            this._DishCollectionDAL = iDischCollectionDAL;
+        }
 
         public void addDish(Dish dish)
         {

@@ -37,7 +37,6 @@
                     <h4>Bestelgegevens</h4>
                     <label class="form-control-static">Bezorgtijd:*</label>
                     @Html.DropDownListFor(m => m.orderModel.delivery_time, new SelectList(Model.time_list))
-
                     @Html.ValidationMessageFor(m => m.orderModel.delivery_time, "", new { @class = "text-danger" }) <br />
                     <label class="form-control-static">Betaalwijze:*</label>
                     @Html.Label("Contant:") @Html.RadioButtonFor(m => m.orderModel.payment_option, "Contant", new { @class = "payment-option-radio-button" })

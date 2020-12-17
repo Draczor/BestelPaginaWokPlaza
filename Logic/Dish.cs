@@ -20,6 +20,12 @@ namespace Logic
             _IDishDAL = DishFactory.CreateDishDAL();
         }
 
+        public Dish(IDishDAL iDishDAL)
+        {
+            
+            this._IDishDAL = iDishDAL;     
+        }
+
         public void updateDish()
         {
             DishDTO dishDTO = new DishDTO 
