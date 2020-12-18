@@ -23,7 +23,7 @@ namespace Logic
         public Dish(IDishDAL iDishDAL)
         {
             
-            this._IDishDAL = iDishDAL;     
+            _IDishDAL = iDishDAL;     
         }
 
         public void updateDish()

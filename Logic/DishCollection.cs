@@ -15,7 +15,7 @@ namespace Logic
         }
         public DishCollection(IDishCollectionDAL iDischCollectionDAL)
         {
-            this._DishCollectionDAL = iDischCollectionDAL;
+            _DishCollectionDAL = iDischCollectionDAL;
         }
 
         public void addDish(Dish dish)

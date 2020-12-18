@@ -14,6 +14,11 @@ namespace Logic
             _OrderDetailsDAL = OrderFactory.CreateOrderDetailsDAL();
         }
 
+        public OrderDetails(IOrderDetailsDAL iOrderDetailsDAL)
+        {
+            _OrderDetailsDAL = iOrderDetailsDAL;
+        }
+
         public void insertOrderDetails(OrderDetailsDTO orderDetailsDTO)
         {
             _OrderDetailsDAL.insertOrderDetails(orderDetailsDTO);

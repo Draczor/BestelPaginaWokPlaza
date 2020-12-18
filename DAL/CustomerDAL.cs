@@ -41,33 +41,5 @@ namespace DAL
 
             return lastID;
         }
-
-        public List<DishDTO> getDishList()
-        {
-            Connection connection = new Connection();
-            DataTable dtDish = new DataTable();
-            List<DishDTO> dishList = new List<DishDTO>();
-
-            using (SqlConnection sqlcon = connection.con)
-            {
-                sqlcon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Dish", sqlcon);
-                sqlDa.Fill(dtDish);
-            }
-
-            for (int i = 0; i < dtDish.Rows.Count; i++)
-            {
-                DishDTO dishDTO = new DishDTO();
-                dishDTO.id = Convert.ToInt32(dtDish.Rows[i]["id"]);
-                dishDTO.name = dtDish.Rows[i]["name"].ToString();
-                dishDTO.price = Convert.ToDecimal(dtDish.Rows[i]["price"]);
-                dishDTO.category_id = Convert.ToInt32(dtDish.Rows[i]["category_id"]);
-                dishDTO.description = dtDish.Rows[i]["description"].ToString();
-
-                dishList.Add(dishDTO);
-            }
-
-            return dishList;
-        }
     }
 }

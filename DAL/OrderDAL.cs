@@ -10,11 +10,6 @@ namespace DAL
     {
         private readonly SqlCommand cmd = new SqlCommand();
 
-        public void getOrderDetails()
-        {
-            throw new NotImplementedException();
-        }
-
         public int placeOrderAndReturnLastID(OrderDTO orderDTO)
         {
             cmd.CommandText = @"INSERT INTO [Order] (customer_id, total_price, payment_option, status, delivery_time, remarks, dateTime) VALUES (@customer_id, @total_price, @payment_option, @status, @delivery_time, @remarks, @dateTime) SELECT SCOPE_IDENTITY() AS lastID";

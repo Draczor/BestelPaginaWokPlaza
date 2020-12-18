@@ -15,6 +15,11 @@ namespace Logic
             _CustomerDAL = CustomerFactory.CreateCustomerDAL();
         }
 
+        public Customer(ICustomerDAL iCustomerDAL)
+        {
+            _CustomerDAL = iCustomerDAL;
+        }
+
         public int addCustommer(CustomerDTO customer)
         {
             return _CustomerDAL.addCustomerAndReturnLastID(customer);

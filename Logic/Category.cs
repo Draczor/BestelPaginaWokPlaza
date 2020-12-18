@@ -13,7 +13,12 @@ namespace Logic
         {
             _CategoryDAL = DALFactory.CreateCategoryDAL();
         }
-        
+
+        public Category(ICategoryDAL iCategoryDAL)
+        {
+            _CategoryDAL = iCategoryDAL;
+        }
+
         public void addCategory(CategoryDTO category)
         {
             _CategoryDAL.addCategory(category);
