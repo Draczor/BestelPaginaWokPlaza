@@ -1,0 +1,119 @@
+﻿.button-field {
+    text-align: center;
+}
+
+.head-buttons {
+    width: 100%;
+}
+
+.add-dish, .add-category, .update-dish, .delete-dish {
+    display: none;
+}
+
+.pop-up-container {
+    position: fixed;
+    background: rgba(0,0,0,0.7);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+}
+
+.pop-up {
+    padding: 15px 0 15px 0;
+    width: 500px;
+    min-height: 200px;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dish-form, .category-form {
+    width: 100%;
+    padding: 0 20px 0 20px;
+}
+
+.pop-up-button-field {
+    width: 100%;
+    text-align: center;
+}
+
+.category-name {
+    text-align: center;
+    background: orange;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.category-header {
+    border-bottom: 1px solid black;
+    margin-top: 50px;
+    min-height: 200px;
+}
+
+.category-header h1 {
+    font-size: 25px;
+}
+
+.category-item {
+    margin-top: 50px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dish-content {
+    padding: 15px;
+    position: relative;
+    border-bottom: 1.5px solid #EAEAEA;
+    min-height: 100px;
+}
+
+.dish-name {
+    display: inline-block;
+    width: 300px;
+    font-size: 18px;
+    word-wrap: break-word;
+}
+
+.dish-price {
+    display: inline-block;
+    position: absolute;
+    right: 25%;
+}
+
+.dish-item {
+    position: relative;
+}
+
+.dish-description {
+    display: block;
+    font-size: 14px;
+    width: 300px;
+    word-wrap: break-word;
+}
+
+.dish-button-actions {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+}
+
+.dish-button-actions button {
+    display: block;
+    width: 60px;
+    margin-top: 5px;
+}
+
+.delete-dish-message {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}

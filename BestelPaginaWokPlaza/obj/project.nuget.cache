@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TWg2ewlURfz9TZWsFzDukTTbbuNnj1D81BGA+vMt2w/j35splt5drjwW7t0bY2UrAgghjmQntdVNh+zyT/dxRQ==",
+  "dgSpecHash": "2TZ7DZha4c7qQy8MegyombrPzgf6QesFN3sfTaPsJanelyyQxjYBVjXQKoTWcnEjqWwaKSsZo//zcc90CK2TOA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza\\BestelPaginaWokPlaza.csproj",
   "expectedPackageFiles": [
@@ -16,7 +16,9 @@
     "C:\\Users\\Lei\\.nuget\\packages\\system-web-helpers.dll\\1.0.0\\system-web-helpers.dll.1.0.0.nupkg.sha512",
     "C:\\Users\\Lei\\.nuget\\packages\\system.data.sqlclient\\4.8.2\\system.data.sqlclient.4.8.2.nupkg.sha512",
     "C:\\Users\\Lei\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
-    "C:\\Users\\Lei\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+    "C:\\Users\\Lei\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\Lei\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\Lei\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.10\\microsoft.netcore.app.host.win-x64.3.1.10.nupkg.sha512"
   ],
   "logs": [
     {

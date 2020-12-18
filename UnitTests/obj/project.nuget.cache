@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dPpmC/8gUIMqdujyJproDc26km39FeMS43Znp1Y3PeySueMWJhOLzDy/6FCxUfgLjVvMu/bOga7ciGFKIzYLsg==",
+  "dgSpecHash": "NjyCAdYfh9fW22VlqBR+obkCQhDpNLsEJ8tTnxPXEpDeTEiwSiwTOZOMVCJW0wW5CSvTR2Aq2Y4z9KnxWRhv8w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lei\\source\\repos\\BestelPaginaWokPlaza\\UnitTests\\UnitTests.csproj",
   "expectedPackageFiles": [
@@ -76,7 +76,8 @@
     "C:\\Users\\Lei\\.nuget\\packages\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512",
     "C:\\Users\\Lei\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Lei\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
-    "C:\\Users\\Lei\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\Lei\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\Lei\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
   ],
   "logs": []
 }

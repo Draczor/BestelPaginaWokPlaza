@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("70ec744a-3295-4ae1-bd6c-0871f79c09fb")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("BestelPaginaWokPlaza")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

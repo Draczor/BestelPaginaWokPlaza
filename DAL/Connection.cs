@@ -8,8 +8,9 @@ namespace DAL
     public class Connection
     {
         //public SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-HAFGCMF;Initial Catalog=WokPlazaBP;Integrated Security=True");
-        public SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-0ELSQI6;Initial Catalog=WokPlazaBP;Integrated Security=True");
-        
+        //public SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-0ELSQI6;Initial Catalog=WokPlazaBP;Integrated Security=True");
+        public SqlConnection con = new SqlConnection(@"Data Source=mssql.fhict.local;Initial Catalog=dbi442142_wokplazabp;User ID=dbi442142_wokplazabp;Password=idea122334");
+
         public void ExecuteCommand(SqlCommand command)
         {
             try

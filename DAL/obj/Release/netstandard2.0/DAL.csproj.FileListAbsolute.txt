@@ -1,0 +1,12 @@
+C:\Users\Lei\source\repos\BestelPaginaWokPlaza\DAL\bin\Release\netstandard2.0\DAL.deps.json
+C:\Users\Lei\source\repos\BestelPaginaWokPlaza\DAL\bin\Release\netstandard2.0\DAL.dll
+C:\Users\Lei\source\repos\BestelPaginaWokPlaza\DAL\bin\Release\netstandard2.0\DAL.pdb
+C:\Users\Lei\source\repos\BestelPaginaWokPlaza\DAL\bin\Release\netstandard2.0\Interface.dll
+C:\Users\Lei\source\repos\BestelPaginaWokPlaza\DAL\bin\Release\netstandard2.0\Interface.pdb
+C:\Users\Lei\source\repos\BestelPaginaWokPlaza\DAL\obj\Release\netstandard2.0\DAL.csprojAssemblyReference.cache
+C:\Users\Lei\source\repos\BestelPaginaWokPlaza\DAL\obj\Release\netstandard2.0\DAL.AssemblyInfoInputs.cache
+C:\Users\Lei\source\repos\BestelPaginaWokPlaza\DAL\obj\Release\netstandard2.0\DAL.AssemblyInfo.cs
+C:\Users\Lei\source\repos\BestelPaginaWokPlaza\DAL\obj\Release\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Lei\source\repos\BestelPaginaWokPlaza\DAL\obj\Release\netstandard2.0\DAL.csproj.CopyComplete
+C:\Users\Lei\source\repos\BestelPaginaWokPlaza\DAL\obj\Release\netstandard2.0\DAL.dll
+C:\Users\Lei\source\repos\BestelPaginaWokPlaza\DAL\obj\Release\netstandard2.0\DAL.pdb
