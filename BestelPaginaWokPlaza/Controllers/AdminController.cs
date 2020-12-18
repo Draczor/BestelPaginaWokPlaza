@@ -92,6 +92,11 @@ namespace BestelPaginaWokPlaza.Controllers
         [HttpPost]
         public IActionResult UpdateDish(AdminViewModel adminViewModel)
         {
+            if (adminViewModel.dishModel.description == null)
+            {
+                adminViewModel.dishModel.description = "";
+            }
+
             Dish dish = new Dish();
             dish.id = adminViewModel.dishModel.id;
             dish.name = adminViewModel.dishModel.name;
