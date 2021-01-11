@@ -6,6 +6,6 @@ namespace Interface
 {
     public interface IUserDAL
     {
-        void login();
+        bool login(UserDTO userDTO);
     }
 }

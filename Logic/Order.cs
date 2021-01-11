@@ -23,5 +23,10 @@ namespace Logic
         {
             return _OrderDAL.placeOrderAndReturnLastID(orderDTO);
         }
+
+        public List<AllOrdersDTO> returnAllOrders()
+        {
+            return _OrderDAL.returnAllOrders();
+        }
     }
 }

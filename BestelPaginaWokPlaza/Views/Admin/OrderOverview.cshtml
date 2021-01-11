@@ -1,0 +1,69 @@
+﻿@model BestelPaginaWokPlaza.Models.OverviewModel
+@{
+}
+<link rel="stylesheet" href="~/css/Overview.css" />
+
+<button type="button" onclick="location.href='@Url.Action("Management", "Admin")'" class="btn btn-link">Terug naar management</button>
+
+<h1 class="title">Bestelling overzicht</h1>
+<table class="table overview-table">
+    <thead>
+        <tr>
+            <th scope="col">Order nr</th>
+            <th scope="col">Klant nr</th>
+            <th scope="col">Totale prijs</th>
+            <th scope="col">Betaalmethode</th>
+            <th scope="col">Status</th>
+            <th scope="col">Bezorgtijd</th>
+            <th scope="col">Opmerkingen</th>
+            <th scope="col">Datum en tijd</th>
+            <th scope="col">Klantnaam</th>
+            <th scope="col">Straat en huisnummer</th>
+            <th scope="col">Postcode</th>
+            <th scope="col">Plaats</th>
+            <th scope="col">Email</th>
+            <th scope="col">Telefoon nr</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (AllOrderModel allOrderModel in Model.AllOrderList)
+        {
+        <tr id="selectedRow" class="selected-row">
+            <td class="order-id" scope="row">@allOrderModel.id</td>
+            <td>@allOrderModel.customer_id</td>
+            <td>@allOrderModel.total_price</td>
+            <td>@allOrderModel.payment_option</td>
+            <td>@allOrderModel.status</td>
+            <td>@allOrderModel.delivery_time</td>
+            <td>@allOrderModel.remarks</td>
+            <td>@allOrderModel.dateTime</td>
+            <td>@allOrderModel.name</td>
+            <td>@allOrderModel.street_housenr</td>
+            <td>@allOrderModel.postal_code</td>
+            <td>@allOrderModel.place</td>
+            <td>@allOrderModel.email</td>
+            <td>@allOrderModel.phone_number</td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<partial name="Partials/_SelectedOrder" />
+
+<script>
+    let popupcontainers = document.querySelectorAll(".pop-up-container");
+    popupcontainers.forEach(popup => {
+        popup.addEventListener("click", function (e) {
+            console.log("clicked");
+            if (e.target.classList.contains("pop-up-container")) {
+                document.querySelector(".selected-order").style.display = "none";
+
+                var allDishFields = document.querySelectorAll(".dish-order");
+
+                allDishFields.forEach(function (element) {
+                    element.remove();
+                });
+            }
+        })
+    })
+</script>

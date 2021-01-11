@@ -9,6 +9,7 @@ using BestelPaginaWokPlaza.Models;
 using Logic;
 using Interface;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Http;
 
 namespace BestelPaginaWokPlaza.Controllers
 {
@@ -63,6 +64,18 @@ namespace BestelPaginaWokPlaza.Controllers
         [HttpPost]
         public IActionResult CheckOut(OrderViewModel orderViewModel)
         {
+            var startTime = DateTime.Parse("16:00");
+            var endTime = DateTime.Parse("20:00");
+            List<string> time_list = new List<string>();
+
+            while (startTime < endTime)
+            {
+
+                time_list.Add(startTime.ToShortTimeString());
+                startTime = startTime.AddMinutes(15);
+            }
+            orderViewModel.time_list = time_list;
+
             CustomerDTO customerDTO = new CustomerDTO();
             customerDTO.name = orderViewModel.customerModel.name;
             customerDTO.street_housenr = orderViewModel.customerModel.street_housenr;
@@ -80,7 +93,14 @@ namespace BestelPaginaWokPlaza.Controllers
             orderDTO.payment_option = orderViewModel.orderModel.payment_option;
             orderDTO.status = "Nieuw";
             orderDTO.delivery_time = orderViewModel.orderModel.delivery_time;
-            orderDTO.remarks = orderViewModel.orderModel.remarks;
+            if (orderViewModel.orderModel.remarks == null)
+            {
+                orderDTO.remarks = " ";
+            }
+            else
+            {
+                orderDTO.remarks = orderViewModel.orderModel.remarks;
+            }
             orderDTO.dateTime = DateTime.Now;
 
             Order order = new Order();
@@ -100,7 +120,11 @@ namespace BestelPaginaWokPlaza.Controllers
                 orderDetails.insertOrderDetails(orderDetailsDTO);
             }
 
-            return RedirectToAction("Order", "OrderPage");
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Order", "OrderPage");
+            }
+            return View(orderViewModel);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

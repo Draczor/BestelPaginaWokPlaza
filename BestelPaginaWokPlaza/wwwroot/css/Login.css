@@ -1,0 +1,11 @@
+﻿.login-container {
+    width: 60%;
+}
+
+.login-button-field {
+    text-align: center;
+}
+
+.login-error-message {
+    color: red;
+}

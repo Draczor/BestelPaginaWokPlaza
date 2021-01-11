@@ -4,7 +4,9 @@
 }
 <link rel="stylesheet" href="~/css/Management.css" />
 
-<button type="button" onclick="location.href='@Url.Action("Order", "OrderPage")'" class="btn btn-link">Terug naar bestelpagina</button>
+<button type="button" onclick="location.href='@Url.Action("Order", "OrderPage")'" class="btn btn-link back-button">Terug naar bestelpagina</button>
+<button type="button" onclick="location.href='@Url.Action("OrderOverview", "Admin")'" class="btn btn-link overview-button">Naar bestellingsoverzicht</button>
+<button type="button" onclick="location.href='@Url.Action("Logout", "Admin")'" class="btn btn-link logout-button">Uitloggen</button>
 <h1 class="title">Beheer Pagina</h1>
 <div class="row">
     <div class="col-md-6 button-field">

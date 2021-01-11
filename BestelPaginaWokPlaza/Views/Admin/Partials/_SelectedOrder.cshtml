@@ -1,0 +1,66 @@
+﻿@model BestelPaginaWokPlaza.Models.OverviewModel
+@{
+}
+
+<div class="selected-order">
+    <div class="pop-up-container" id="pop-up-container">
+        <div class="pop-up container">
+            <h1 class="pop-up-title">Bestelling nr:</h1>
+            <div class="dishes-field"></div>
+            <button type="button" id="CancelPopup" class="btn btn-secondary">Sluiten</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    var items = document.querySelectorAll("#selectedRow");
+    items.forEach(item => {
+        item.addEventListener("click", function (e) {
+            var rowContent = e.target.parentElement;
+            var id = rowContent.querySelector(".order-id").innerHTML;
+
+            $.get("/Admin/ReturnDishAndOrderDetailsByOrderID", { id: id }, function (result) {
+
+                result.forEach(function (element) {
+
+                    const quantityDish = element["quantity"]
+                    const totalPrice = quantityDish * element["price"];
+                    const dishesField = document.querySelector(".dishes-field");
+                    const popupTitle = document.querySelector(".pop-up-title");
+                    popupTitle.innerHTML = "Bestelling nr: " + element["order_id"];
+
+                    const newDiv = document.createElement("div");
+                    newDiv.className = 'dish-order';
+                    dishesField.append(newDiv);
+
+                    const quantity = document.createElement("p");
+                    quantity.className = 'dish-order-quantity';
+                    quantity.innerHTML = element["quantity"] + "x";
+                    newDiv.append(quantity);
+
+                    const name = document.createElement("p");
+                    name.className = 'dish-order-name';
+                    name.innerHTML = element["name"];
+                    newDiv.append(name);
+
+                    const price = document.createElement("p");
+                    price.className = 'dish-order-price';
+                    price.innerHTML = "&#8364; " + totalPrice.toFixed(2);
+                    newDiv.append(price);
+                })
+            });
+
+            document.querySelector(".selected-order").style.display = "block";
+        })
+    });
+
+    document.querySelector("#CancelPopup").addEventListener("click", function (e) {
+        document.querySelector(".selected-order").style.display = "none";
+
+        var allDishFields = document.querySelectorAll(".dish-order");
+
+        allDishFields.forEach(function (element) {
+            element.remove();
+        });
+    })
+</script>

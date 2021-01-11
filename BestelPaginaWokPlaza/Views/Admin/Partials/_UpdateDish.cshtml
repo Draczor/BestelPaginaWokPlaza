@@ -20,7 +20,7 @@
                 @Html.DropDownListFor(m => m.dishModel.category_id, new SelectList(Model.categoryList, "Value", "Text"))
                 @Html.ValidationMessageFor(m => m.dishModel.category_id, "", new { @class = "text-danger" }) <br />
 
-                <label class="form-control-static">Omschrijving:*</label>
+                <label class="form-control-static">Omschrijving:</label>
                 @Html.EditorFor(m => m.dishModel.description, new { htmlAttributes = new { @class = "form-control" }, })
                 @Html.ValidationMessageFor(m => m.dishModel.description, "", new { @class = "text-danger" }) <br />
                 <div class="pop-up-button-field">

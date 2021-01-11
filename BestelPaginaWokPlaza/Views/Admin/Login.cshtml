@@ -1,7 +1,22 @@
-﻿
+﻿@model BestelPaginaWokPlaza.Models.LoginModel
 @{
     ViewData["Title"] = "Login";
 }
+<link rel="stylesheet" href="~/css/Login.css" />
 
-<h1 class="title">Login</h1>
-
+<h1 class="title">Login Pagina</h1>
+<div class="login-container container">
+    <form method="post" id="" class="" enctype="multipart/form-data" action="Login">
+        <label class="form-control-static">Email:*</label>
+        @Html.TextBoxFor(m => m.email, new { @type = "email", @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.email, "", new { @class = "text-danger" }) <br />
+        <label class="form-control-static">Paswoord:*</label>
+        @Html.EditorFor(m => m.password, new { htmlAttributes = new { @class = "form-control" }, })
+        @Html.ValidationMessageFor(m => m.password, "", new { @class = "text-danger" }) <br />
+        <div class="login-button-field">
+            <input class="btn btn-primary" type="submit" value="Inloggen" />
+            <button type="button" id="CancelDish" onclick="location.href='@Url.Action("Order", "OrderPage")'" class="btn btn-secondary">Terug</button>
+        </div>
+        <div class="login-error-message">@ViewData["loginErrorMsg"]</div>
+    </form>
+</div>

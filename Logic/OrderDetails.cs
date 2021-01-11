@@ -23,5 +23,10 @@ namespace Logic
         {
             _OrderDetailsDAL.insertOrderDetails(orderDetailsDTO);
         }
+        
+        public List<OrderDetailsAndDishDTO> returnDishAndOrderDetailsByOrderIDList(int id)
+        {
+            return _OrderDetailsDAL.returnDishAndOrderDetailsByOrderIDList(id);
+        }
     }
 }

@@ -7,5 +7,7 @@ namespace Interface
     public interface IOrderDAL
     {
         int placeOrderAndReturnLastID(OrderDTO orderDTO);
+
+        List<AllOrdersDTO> returnAllOrders();
     }
 }

@@ -1,0 +1,56 @@
+﻿.overview-table {
+    font-size: 12px;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.pop-up {
+    padding: 15px 0 15px 0;
+    width: 500px;
+    min-height: 200px;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pop-up-container {
+    position: fixed;
+    background: rgba(0,0,0,0.7);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+}
+
+.selected-order {
+    display: none;
+}
+
+.selected-row:hover {
+    cursor: pointer;
+    background: #ccc;
+}
+
+.dishes-field {
+    width: 80%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.dish-order-quantity {
+    display: inline-block;
+}
+
+.dish-order-name {
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.dish-order-price {
+    float: right;
+}
