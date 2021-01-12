@@ -39,5 +39,23 @@ namespace UnitTests
                 orderDetailsDTO.quantity == 1
             )));
         }
+
+        [Test]
+        public void returnDishAndOrderDetailsByOrderIDList_MockSetupOrderDetails_Verify()
+        {
+            //Arrange
+            int id = 8;
+
+            orderDetailsDALMock.Setup(orderDetailsDAL => orderDetailsDAL.returnDishAndOrderDetailsByOrderIDList(id));
+            OrderDetails orderDetails = new OrderDetails(orderDetailsDALMock.Object);
+            
+            //Act
+            orderDetails.returnDishAndOrderDetailsByOrderIDList(id);
+
+            //Assert
+            orderDetailsDALMock.Verify(mock => mock.returnDishAndOrderDetailsByOrderIDList(It.Is((int id) =>
+                true
+            )));
+        }
     }
 }

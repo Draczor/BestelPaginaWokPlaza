@@ -21,14 +21,6 @@ namespace Logic
 
         public bool login(UserDTO userDTO)
         {
-            //UserDTO userDTO = new UserDTO
-            //{
-            //    id = id,
-            //    name = name,
-            //    price = price,
-            //    category_id = category_id,
-            //    description = description
-            //};
             return _IUserDAL.login(userDTO);
         }
     }
